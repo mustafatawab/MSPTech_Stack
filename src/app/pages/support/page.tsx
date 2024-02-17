@@ -9,7 +9,7 @@ const page = () => {
       <Navbar />
       {/* Hero Section */}
 
-      <div className="uppercase w-2/3 mx-auto mt-40 space-y-10 overflow-hidden">
+      <div className="uppercase w-2/3 mx-auto mt-40 space-y-10 ">
         <p className="font-[900]  sm:text-[24px] md:text-[32px] lg:text-[64px] text-white">
           Amazing Support ,
           <br />

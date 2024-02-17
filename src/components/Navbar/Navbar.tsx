@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isSearch, setIsSearch] = useState(false);
 
   return (
-    <div className="">
+    <div className="h-fit">
       {/* Background Image */}
       <Image
         className="absolute -z-10 w-[1320px]  object-cover"

@@ -9,12 +9,13 @@ import Button from "../button/PrimaryButton";
 import dunya from "../../assets/svgs/dunya.svg";
 import search from "../../assets/svgs/search.svg";
 import { IoMdClose } from "react-icons/io";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
 
   return (
-    <div className="overflow-hidden">
+    <div className="">
       {/* Background Image */}
       <Image
         className="absolute -z-10 w-[1320px]  object-cover"
@@ -24,29 +25,24 @@ const Navbar = () => {
 
       {/* Navbar starts here */}
 
-      <nav className="relative  flex items-center justify-between px-12 text-white font-semibold z-20">
+      <nav className="relative  flex items-center justify-between px-12 text-white font-semibold z-20 ">
         <Link href={"/"}>
-          {" "}
-          <Image src={logo} alt="logo" />{" "}
+          <Image src={logo} alt="logo" />
         </Link>
         <ul className="flex justify-between items-center gap-5 ">
-          <li
-            className="group relative"
-            onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
-          >
-            <span className="relative flex gap-2">
+          <li className="group relative cursor-pointer">
+            <span className="static flex gap-2" onMouseEnter={() => setIsOpen(true)}>
               Marketplace <Image src={arrow} alt="" />
             </span>
 
             {isOpen && (
-              <ul className="space-y-3 duration-500 font-light text-gray-700 w-52 p-2 -ml-2 mt-1  rounded-lg group-hover:block absolute top-full  bg-white border ">
-                <li>
+              <ul onMouseLeave={() => setIsOpen(false)} className="z-20 h-fit space-y-3  font-light text-gray-700 w-52 p-2 -ml-2 mt-1  rounded-lg  absolute   bg-white  ">
+                <li className="font-semibold ">
                   <Link href={"/pages/exploreMarketplace"}>
                     Explore The Marketplace
                   </Link>
                 </li>
-                <li>
+                <li className="font-semibold">
                   <Link href={"/pages/venderMarketplace"}>
                     Marketplace for Venders
                   </Link>
@@ -58,12 +54,13 @@ const Navbar = () => {
             <Link href={"#"}>Growth With Us</Link>
           </li>
           <li>
-            <Link href={"#"}>About</Link>
+            <Link href={"/pages/about"}>About</Link>
           </li>
           <li>
-            <Link href={"#"}>Support</Link>
+            <Link href={"/pages/support"}>Support</Link>
           </li>
         </ul>
+
         <div className="flex items-center gap-6">
           <Link href={"#"}>Login</Link>
           <Button text="Get Started" />
@@ -73,10 +70,10 @@ const Navbar = () => {
       </nav>
 
       {isSearch && (
-        <div className="flex justify-center items-center duration-300">
+        <div className="flex justify-center items-center ">
           <form
             action=""
-            className="bg-blue text-white w-2/3 mx-auto absolute top-3  rounded-3xl py-1 px-3 flex justify-center items-center"
+            className="bg-blue text-white w-2/3 mx-auto absolute top-3  rounded-3xl py-1 px-3 flex justify-center items-center z-20"
           >
             <input
               className="p-2 w-full  bg-transparent outline-none"

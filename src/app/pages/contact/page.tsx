@@ -5,7 +5,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <div>Explore The Market Place</div>
+      <div>Get Closer To Us</div>
     </>
   );
 };

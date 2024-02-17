@@ -160,8 +160,8 @@ const Main = () => {
             <Image src={image1} alt="" />
           </div>
           <div className="flex md:static lg:relative ">
-            <Image src={image2} alt="" />
-            <Image className="-ml-20 -z-10" src={image3} alt="" />
+            <Image src={image2} className="z-20" alt="" />
+            <Image className="lg:-ml-48 lg:-mb-8" src={image3} alt="" />
           </div>
 
           <form
@@ -331,9 +331,9 @@ const Main = () => {
       </section>
 
       {/* Section 9 - News */}
-      <section className="py-20">
+      <section className="py-20 w-full">
         <Heading text="News" />
-        <div className="flex justify-between">
+        <div className="flex flex-wrap justify-between">
           <div className=" shadow-xl w-[380px]  bg-[#FFFFFF] rounded-b-3xl">
             <Image src={newsImage1} alt="" />
             <span className="p-5    flex flex-col justify-center gap-3 ">

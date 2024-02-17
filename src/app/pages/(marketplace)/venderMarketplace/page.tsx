@@ -7,9 +7,18 @@ import icon2 from "@/assets/svgs/venderMarketplace/icon2.svg";
 import icon3 from "@/assets/svgs/venderMarketplace/icon3.svg";
 import PrimaryButton from "@/components/button/PrimaryButton";
 import growUpImage from "@/assets/svgs/home/growUp.svg";
+import finance from "@/assets/svgs/venderMarketplace/finance.svg";
+import productivity from "@/assets/svgs/venderMarketplace/productivity.svg";
+import continuity from "@/assets/svgs/venderMarketplace/continuity.svg";
+import infrastructure from "@/assets/svgs/venderMarketplace/infrastructure.svg";
+import image1 from "@/assets/svgs/home/scheduleDemo/image.svg";
+import image2 from "@/assets/svgs/home/scheduleDemo/image2.svg";
+import image3 from "@/assets/svgs/home/scheduleDemo/image3.svg";
+import Navbar from "@/components/Navbar/Navbar";
 const page = () => {
   return (
     <>
+      <Navbar />
       {/* Hero Section */}
 
       <div className="uppercase w-2/3 mx-auto mt-40 space-y-10 overflow-hidden">
@@ -122,6 +131,161 @@ const page = () => {
                 </p>
               </span>
             </div>
+          </div>
+        </section>
+
+        {/* section 5 - Our marketplace delivers value for every vendor,  in every business */}
+        <section>
+          <Heading text="Our marketplace delivers value for every vendor,  in every business" />
+          <div className="flex flex-wrap justify-between items-center my-6">
+            <span className="flex flex-col">
+              <Image src={finance} alt="FInance" />
+              <p className="text-blue font-bold text-xl px-3"> Finance</p>
+            </span>
+
+            <span className="flex flex-col">
+              <Image src={productivity} alt="productivity" />
+              <p className="text-blue font-bold text-xl px-3"> Productivity</p>
+            </span>
+
+            <span className="flex flex-col">
+              <Image src={continuity} alt="Continuity" />
+              <p className="text-blue font-bold text-xl px-3"> Continuity</p>
+            </span>
+
+            <span className="flex flex-col">
+              <Image src={infrastructure} alt="Infrastructure" />
+              <p className="text-blue font-bold text-xl px-3">
+                {" "}
+                Infrastructure
+              </p>
+            </span>
+          </div>
+          <div>
+            <span className="bg-blue rounded-full w-[27px] h-[10px]"></span>
+          </div>
+        </section>
+
+        {/* section 6 - Interested in Joining the Marketplace? */}
+
+        <section className="md:static lg:relative my-10 py-10">
+          <span className="w-1/2 block">
+            <Heading text="Interested in Joining the Marketplace?" />
+          </span>
+          <p className="text-[#4F4F4F] text-[24px]">
+            To begin the vendor evaluation process, please fill out this bform.
+            We will reach out with further questions and schedule a time to
+            meet.
+          </p>
+          <div className="md:mt-20 lg:mt-40 bg-blue flex flex-wrap md:justify-center lg:justify-start md:items-center lg:items-center p-5 -z-30 rounded-2xl gap-10">
+            <span className="flex  items-end gap-4">
+              <div className="">
+                <Image src={image1} alt="" />
+              </div>
+              <div className="flex md:static lg:relative ">
+                <Image src={image2} className="z-20" alt="" />
+                <Image className="lg:-ml-48 lg:-mb-8" src={image3} alt="" />
+              </div>
+            </span>
+            <form
+              action=""
+              className="bg-white flex flex-col gap-5 md:static lg:absolute right-5   mr-10 p-7 rounded-lg md:w-[300px] lg:w-[460px] shadow-lg"
+            >
+              <input
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                type="text"
+                placeholder=" Company Name*"
+              />
+
+              <input
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                type="text"
+                placeholder=" Company Website*"
+              />
+
+              <input
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                type="text"
+                placeholder="Your Name*"
+              />
+
+              <input
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                type="text"
+                placeholder="Job Title*"
+              />
+              <input
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                type="email"
+                placeholder="Your E-mail Address*"
+              />
+
+              <select
+                name="country"
+                id="country"
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+              >
+                <option
+                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                  value="country"
+                  defaultValue={"Select Country"}
+                  disabled
+                >
+                  Select Country
+                </option>
+
+                <option
+                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                  value="country"
+                >
+                  Pakistan
+                </option>
+                <option
+                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                  value="country"
+                >
+                  USA
+                </option>
+                <option
+                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                  value="country"
+                >
+                  India
+                </option>
+                <option
+                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                  value="country"
+                >
+                  Other
+                </option>
+              </select>
+              <div className="text-[#577DB8] font-semibold px-2">
+                <p className="">Were your prefered by anyone ?</p>
+                <div className="flex gap-10 ">
+                  <span className="">
+                    <input
+                      type="radio"
+                      name="prefered"
+                      value={"yes"}
+                      id="yes"
+                    />
+                    <label htmlFor="yes">Yes</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="prefered" id="no" value={"no"} />{" "}
+                    <label htmlFor="no">No</label>
+                  </span>
+                </div>
+              </div>
+              <input
+                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+                type="text"
+                placeholder="If yes who refered you ?"
+              />
+              <button className="w-fit ml-auto bg-blue text-white rounded-3xl px-8 py-2 ">
+                Submit
+              </button>
+            </form>
           </div>
         </section>
       </Wrapper>

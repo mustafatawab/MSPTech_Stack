@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#F9F9F9] w-screen">
-        <Navbar />
+      <body className="bg-[#F9F9F9] w-full">
+        {/* <Navbar /> */}
         {children}
         <Footer />
       </body>

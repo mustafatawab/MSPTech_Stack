@@ -9,10 +9,12 @@ import Button from "../button/PrimaryButton";
 import dunya from "../../assets/svgs/dunya.svg";
 import search from "../../assets/svgs/search.svg";
 import { IoMdClose } from "react-icons/io";
+import PrimaryButton from "../button/PrimaryButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
+  const [growth, setGrowth] = useState(false);
 
   return (
     <div className="h-fit">
@@ -31,12 +33,18 @@ const Navbar = () => {
         </Link>
         <ul className="flex justify-between items-center gap-5 ">
           <li className="group relative cursor-pointer">
-            <span className="static flex gap-2" onMouseEnter={() => setIsOpen(true)}>
+            <span
+              className="static flex gap-2"
+              onMouseEnter={() => setIsOpen(true)}
+            >
               Marketplace <Image src={arrow} alt="" />
             </span>
 
             {isOpen && (
-              <ul onMouseLeave={() => setIsOpen(false)} className=" z-20 h-fit space-y-3  font-light text-gray-700 w-64 p-2 -ml-2 mt-1  rounded-lg  absolute   bg-white  ">
+              <ul
+                onMouseLeave={() => setIsOpen(false)}
+                className=" z-20 h-fit space-y-3  font-light text-gray-700 w-64 p-2 -ml-2 mt-1  rounded-lg  absolute   bg-white  "
+              >
                 <li className="font-semibold ">
                   <Link href={"/pages/exploreMarketplace"}>
                     Explore The Marketplace
@@ -50,8 +58,24 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <li>
-            <Link href={"#"}>Growth With Us</Link>
+          <li className="group relative cursor-pointer">
+            <span
+              className="static flex gap-2"
+              onMouseEnter={() => setGrowth(true)}
+            >
+              Growth With Us <Image src={arrow} alt="" />
+            </span>
+
+            {growth && (
+              <div
+                onMouseLeave={() => setGrowth(false)}
+                className=" z-20 h-fit space-y-3  font-light text-gray-700 w-40  p-2 -ml-2 mt-1  rounded-lg  absolute   bg-white  "
+              >
+                <li className="font-semibold ">
+                  <Link href={"/pages/contact"}>Contact Us</Link>
+                </li>
+              </div>
+            )}
           </li>
           <li>
             <Link href={"/pages/about"}>About</Link>
@@ -62,8 +86,10 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-6">
-          <Link href={"#"}>Login</Link>
-          <Button text="Get Started" />
+          <Link href={"/pages/signin"}>Login</Link>
+          <Link href={"/pages/signup"}>
+            <PrimaryButton text="Get Started" />
+          </Link>
           <Image src={dunya} alt="" />
           <Image onClick={() => setIsSearch(true)} src={search} alt="" />
         </div>

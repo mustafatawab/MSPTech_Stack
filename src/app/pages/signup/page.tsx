@@ -4,7 +4,17 @@ import Link from "next/link";
 import background from "@/assets/images/background.jpeg";
 import Heading from "@/components/Heading/heading";
 
-const page = () => {
+const country = [
+  "United States",
+  "UK",
+  "Pakistan",
+  "India",
+  "Canada",
+  "Australia",
+  "Bangladesh",
+];
+
+const page = async () => {
   return (
     <main>
       <div className="bg-blue relative">
@@ -78,7 +88,18 @@ const page = () => {
               Select Country
             </option>
 
-            <option
+            {country.map((cntry) => (
+              <>
+                <option
+                  className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
+                  value={cntry}
+                >
+                  {cntry}
+                </option>
+              </>
+            ))}
+
+            {/* <option
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
               value="country"
             >
@@ -101,7 +122,7 @@ const page = () => {
               value="country"
             >
               Other
-            </option>
+            </option> */}
           </select>
 
           <div className="flex justify-between ">
@@ -161,21 +182,14 @@ const page = () => {
             />
           </span>
 
-          <Link className="text-[#0F1519CC] font-semibold text-lg" href={"#"}>
-            Forgot Password?
+         
+          <Link
+            className="bg-blue px-12 text-white font-semibold rounded-full py-2 mx-auto w-fit"
+            href={"/pages/signup/step2"}
+          >
+            <button>Continue</button>
           </Link>
-          <button className="bg-blue px-12 text-white font-semibold rounded-full py-2 mx-auto w-fit">
-            Login
-          </button>
-          <p>
-            Don't have any account ?{" "}
-            <Link
-              className="text-blue font-bold text-xl"
-              href={"/pages/signup"}
-            >
-              Sign Up
-            </Link>{" "}
-          </p>
+          
         </form>
       </div>
     </main>

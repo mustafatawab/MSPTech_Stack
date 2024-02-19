@@ -15,6 +15,7 @@ import image1 from "@/assets/svgs/home/scheduleDemo/image.svg";
 import image2 from "@/assets/svgs/home/scheduleDemo/image2.svg";
 import image3 from "@/assets/svgs/home/scheduleDemo/image3.svg";
 import Navbar from "@/components/Navbar/Navbar";
+import VenderForm from "@/views/venderMarketplace/Form/Form";
 const page = () => {
   return (
     <>
@@ -187,105 +188,7 @@ const page = () => {
                 <Image className="lg:-ml-48 lg:-mb-8" src={image3} alt="" />
               </div>
             </span>
-            <form
-              action=""
-              className="bg-white flex flex-col gap-5 md:static lg:absolute right-5   mr-10 p-7 rounded-lg md:w-[300px] lg:w-[460px] shadow-lg"
-            >
-              <input
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                type="text"
-                placeholder=" Company Name*"
-              />
-
-              <input
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                type="text"
-                placeholder=" Company Website*"
-              />
-
-              <input
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                type="text"
-                placeholder="Your Name*"
-              />
-
-              <input
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                type="text"
-                placeholder="Job Title*"
-              />
-              <input
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                type="email"
-                placeholder="Your E-mail Address*"
-              />
-
-              <select
-                name="country"
-                id="country"
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-              >
-                <option
-                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                  value="country"
-                  defaultValue={"Select Country"}
-                  disabled
-                >
-                  Select Country
-                </option>
-
-                <option
-                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                  value="country"
-                >
-                  Pakistan
-                </option>
-                <option
-                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                  value="country"
-                >
-                  USA
-                </option>
-                <option
-                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                  value="country"
-                >
-                  India
-                </option>
-                <option
-                  className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                  value="country"
-                >
-                  Other
-                </option>
-              </select>
-              <div className="text-[#577DB8] font-semibold px-2">
-                <p className="">Were your prefered by anyone ?</p>
-                <div className="flex gap-10 ">
-                  <span className="">
-                    <input
-                      type="radio"
-                      name="prefered"
-                      value={"yes"}
-                      id="yes"
-                    />
-                    <label htmlFor="yes">Yes</label>
-                  </span>
-                  <span>
-                    <input type="radio" name="prefered" id="no" value={"no"} />{" "}
-                    <label htmlFor="no">No</label>
-                  </span>
-                </div>
-              </div>
-              <input
-                className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-                type="text"
-                placeholder="If yes who refered you ?"
-              />
-              <button className="w-fit ml-auto bg-blue text-white rounded-3xl px-8 py-2 ">
-                Submit
-              </button>
-            </form>
+            <VenderForm />
           </div>
         </section>
       </Wrapper>

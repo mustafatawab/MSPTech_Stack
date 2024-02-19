@@ -46,8 +46,8 @@ const page = () => {
             <Heading text="Why Venders Choose MSPTech Stack Marketplace" />
           </div>
 
-          <div className="flex flex-wrap justify-between gap-10 items-center text-center">
-            <span className="w-[360px] text-center bg-blue py-10 px-14 flex flex-col justify-center items-center gap-5 text-white rounded-xl shadow-xl">
+          <div className="flex flex-wrap justify-between gap-10 items-center text-center ">
+            <span className=" w-[360px] text-center bg-blue py-10 px-14 flex flex-col justify-center items-center gap-5 text-white rounded-xl shadow-xl">
               <Image src={icon1} alt="" />
               <h3 className="text-2xl font-semibold">Reach new SMB markets</h3>
               <p>
@@ -56,7 +56,7 @@ const page = () => {
               </p>
             </span>
 
-            <span className="w-[360px] text-center bg-[#EFEFF1] py-10 px-14 flex flex-col justify-center items-center gap-5 text-black rounded-xl shadow-xl">
+            <span className=" w-[360px] text-center bg-[#EFEFF1] py-10 px-14 flex flex-col justify-center items-center gap-5 text-black rounded-xl shadow-xl">
               <Image src={icon2} alt="" />
               <h3 className="text-2xl font-semibold">Strengthen your brand</h3>
               <p>

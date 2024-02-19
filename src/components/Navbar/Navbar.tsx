@@ -18,14 +18,14 @@ const Navbar = () => {
     <div className="h-fit">
       {/* Background Image */}
       <Image
-        className="absolute -z-10 w-[1320px]  object-cover"
+        className="absolute -z-10  w-5/6"
         src={background}
         alt="backgorund"
       />
 
       {/* Navbar starts here */}
 
-      <nav className="relative  flex items-center justify-between px-12 text-white font-semibold z-20 ">
+      <nav className="relative  flex items-center justify-between text-lg px-20 text-white font-semibold z-20 ">
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
             </span>
 
             {isOpen && (
-              <ul onMouseLeave={() => setIsOpen(false)} className="z-20 h-fit space-y-3  font-light text-gray-700 w-52 p-2 -ml-2 mt-1  rounded-lg  absolute   bg-white  ">
+              <ul onMouseLeave={() => setIsOpen(false)} className=" z-20 h-fit space-y-3  font-light text-gray-700 w-64 p-2 -ml-2 mt-1  rounded-lg  absolute   bg-white  ">
                 <li className="font-semibold ">
                   <Link href={"/pages/exploreMarketplace"}>
                     Explore The Marketplace

@@ -17,7 +17,7 @@ const page = () => {
         </p>
       </div>
       <Wrapper>
-        <section className="mt-[450px] space-y-10">
+        <section className="mt-[450px] space-y-20">
           <p className="text-blue text-center text-[24px] font-bold">
             Explore the possibilities with the global MSPTech Stack Marketplace{" "}
             <br />
@@ -63,7 +63,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="bg-[#0455B7] rounded-xl text-center space-y-10 p-10 mt-10">
+          <div className="bg-[#0455B7] rounded-xl text-center space-y-10 p-10 mt-20">
             <h2 className="text-white font-bold text-4xl">
               Need more proactive support for a project?
             </h2>

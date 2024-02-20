@@ -10,17 +10,21 @@ import dunya from "../../assets/svgs/dunya.svg";
 import search from "../../assets/svgs/search.svg";
 import { IoMdClose } from "react-icons/io";
 import PrimaryButton from "../button/PrimaryButton";
+import { MdMenu } from "react-icons/md";
+import { FaSearch } from "react-icons/fa";
+import { MdArrowUpward } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
   const [growth, setGrowth] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <div className="h-fit">
       {/* Background Image */}
       <Image
-        className="absolute -z-10  w-5/6"
+        className="w-fit absolute -z-10 "
         src={background}
         alt="backgorund"
       />
@@ -31,7 +35,8 @@ const Navbar = () => {
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
-        <ul className="flex justify-between items-center gap-5 ">
+
+        <ul className="xs:hidden sm:hidden md:hidden lg:flex justify-between items-center gap-5 ">
           <li className="group relative cursor-pointer">
             <span
               className="static flex gap-2"
@@ -60,7 +65,7 @@ const Navbar = () => {
           </li>
           <li className="group relative cursor-pointer">
             <span
-              className="static flex gap-2"
+              className="static flex gap-2 "
               onMouseEnter={() => setGrowth(true)}
             >
               Growth With Us <Image src={arrow} alt="" />
@@ -85,7 +90,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="flex items-center gap-6">
+        <div className="xs:hidden sm:hidden lg:flex items-center gap-6">
           <Link href={"/pages/signin"}>Login</Link>
           <Link href={"/pages/signup"}>
             <PrimaryButton text="Get Started" />
@@ -93,24 +98,99 @@ const Navbar = () => {
           <Image src={dunya} alt="" />
           <Image onClick={() => setIsSearch(true)} src={search} alt="" />
         </div>
-      </nav>
 
-      {isSearch && (
-        <div className="flex justify-center items-center ">
-          <form
-            action=""
-            className="bg-blue text-white w-2/3 mx-auto absolute top-3  rounded-3xl py-1 px-3 flex justify-center items-center z-20"
-          >
-            <input
-              className="p-2 w-full  bg-transparent outline-none"
-              type="text"
-              placeholder="Search Products"
-            />
+        {isSearch && (
+          <div className="flex justify-center items-center ">
+            <form
+              action=""
+              className="bg-blue text-white w-2/3 mx-auto absolute top-3  rounded-3xl py-1 px-3 flex justify-center items-center z-20"
+            >
+              <input
+                className="p-2 w-full  bg-transparent outline-none"
+                type="text"
+                placeholder="Search Products"
+              />
+              <IoMdClose
+                className="text-3xl text-white"
+                onClick={() => setIsSearch(false)}
+              />
+            </form>
+          </div>
+        )}
+
+        {toggle ? (
+          <div className="">
             <IoMdClose
-              className="text-3xl text-white"
-              onClick={() => setIsSearch(false)}
+              className="xs:block md:block lg:hidden text-4xl"
+              onClick={() => setToggle(false)}
             />
-          </form>
+          </div>
+        ) : (
+          <div className="flex items-center gap-5">
+            <FaSearch onClick={() => setIsSearch(true)} />
+            <MdMenu
+              className="xs:block md:block lg:hidden text-4xl"
+              onClick={() => setToggle(true)}
+            />
+          </div>
+        )}
+      </nav>
+      {toggle && (
+        <div className="fixed bg-black xs:block  lg:hidden w-full text-white p-2">
+          <ul className="p-2">
+            <li
+              onClick={() => setIsOpen(true)}
+              className="flex justify-between items-center"
+            >
+              <p className="text-2xl">Marketplace </p>
+              {isOpen ? (
+                <MdArrowUpward className="text-2xl text-white" />
+              ) : (
+                <Image src={arrow} alt="" />
+              )}
+            </li>
+            {isOpen && (
+              <div className="text-xl px-4 py-2 space-y-1">
+                <p className="">
+                  <Link href={"/pages/exploreMarketplace"}>
+                    Explore Marketplace
+                  </Link>
+                </p>
+                <p className="">
+                  <Link href={"/pages/venderMarketplace"}>
+                    Marketplace for Venders
+                  </Link>
+                </p>
+              </div>
+            )}
+
+            <li
+              onClick={() => {
+                setIsOpen(false);
+
+                setGrowth(true);
+              }}
+              className="flex justify-between items-center text-2xl"
+            >
+              <p className="text-2xl">Growth with Us </p>
+              {growth ? (
+                <MdArrowUpward className="text-2xl text-white" />
+              ) : (
+                <Image src={arrow} alt="" />
+              )}
+            </li>
+
+            {growth && (
+              <div className="text-xl px-4 py-2 space-y-1">
+                <p className="">
+                  <Link href={"/pages/contact"}>Contact Us</Link>
+                </p>
+              </div>
+            )}
+
+            <li className="text-2xl"><Link href={'/pages/about'}>About Us</Link></li>
+            <li className="text-2xl"><Link href={'/pages/support'}>Support</Link></li>
+          </ul>
         </div>
       )}
     </div>

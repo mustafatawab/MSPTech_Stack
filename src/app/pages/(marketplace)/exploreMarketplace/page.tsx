@@ -52,7 +52,7 @@ const page = () => {
 
       <Wrapper>
         {/* Search  */}
-        <div className="flex items-center text-[#16151380] ">
+        <div className="flex items-center text-[#16151380] mt-20">
           <span className="flex items-center bg-white py-1 px-2 border border-[#16151380] rounded-md w-1/3">
             <IoSearchSharp />
             <input

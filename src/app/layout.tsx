@@ -18,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#F9F9F9] w-full">
-        {/* <Navbar /> */}
-        {children}
-        <Footer />
+      <body className="bg-[#F9F9F9] sm:w-auto md:w-fit lg:w-full">
+        <div className="w-auto">
+          {/* <Navbar /> */}
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

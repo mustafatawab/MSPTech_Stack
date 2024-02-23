@@ -20,7 +20,7 @@ const page = () => {
           className="mx-auto w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
           <Heading text="Sign In" />
-          <p className="text-[#0F1519CC] text-2xl font-semibold">Let's Get Started</p>
+          <p className="text-[#0F1519CC] text-2xl font-semibold">Lets Get Started</p>
           <span className="flex flex-col">
             <label htmlFor="">Email</label>
             <input
@@ -40,7 +40,7 @@ const page = () => {
 
           <Link className="text-[#0F1519CC] font-semibold text-lg" href={"#"}>Forgot Password?</Link>
           <button className="bg-blue px-12 text-white font-semibold rounded-full py-2 mx-auto w-fit">Login</button>
-          <p>Don't have any account ? <Link className="text-blue font-bold text-xl" href={"/pages/signup"}>Sign Up</Link> </p>
+          <p>Do not have any account ? <Link className="text-blue font-bold text-xl" href={"/pages/signup"}>Sign Up</Link> </p>
         </form>
       </div>
     </main>

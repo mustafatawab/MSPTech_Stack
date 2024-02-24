@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import mouse from "@/assets/svgs/mouse.svg";
 import Wrapper from "@/components/Wrapper/wrapper";
+import Link from "next/link";
 import { IoSearchSharp } from "react-icons/io5";
 import { MdStarBorder } from "react-icons/md";
 // App Categories
@@ -70,56 +71,67 @@ const page = () => {
           <h2 className="font-semibold text-3xl py-10">
             Oracle Cloud Infrastructure App Categories
           </h2>
+
           <div className="flex flex-wrap xs:fle-col sm:flex-col md:flex-row 2xs:justify-center  gap-10 md:justify-between">
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
-              <Image className="mx-auto" src={cloudManagement} alt="" />
-              <hr className="" />
-              <br />
-              <span className="px-10 flex flex-col ">
-                <p className="font-bold">Cloud Management</p>
-                <p className="text-[#16151399]">70 Applications</p>
-              </span>
-            </div>
+            <Link href={"/pages/exploreMarketplace/productOverview"}>
+              <div className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <Image className="mx-auto" src={cloudManagement} alt="" />
+                <hr className="" />
+                <br />
+                <span className="px-10 flex flex-col ">
+                  <p className="font-bold">Cloud Management</p>
+                  <p className="text-[#16151399]">70 Applications</p>
+                </span>
+              </div>
+            </Link>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
-              <Image className="mx-auto" src={networking} alt="" />
-              <hr className="" />
-              <br />
-              <span className="px-10 flex flex-col ">
-                <p className="font-bold">Networking</p>
-                <p className="text-[#16151399]">102 Applications</p>
-              </span>
-            </div>
+            <Link href={"/pages/exploreMarketplace/productOverview"}>
+              <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <Image className="mx-auto" src={networking} alt="" />
+                <hr className="" />
+                <br />
+                <span className="px-10 flex flex-col ">
+                  <p className="font-bold">Networking</p>
+                  <p className="text-[#16151399]">102 Applications</p>
+                </span>
+              </div>
+            </Link>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
-              <Image className="mx-auto" src={security} alt="" />
-              <hr className="" />
-              <br />
-              <span className="px-10 flex flex-col ">
-                <p className="font-bold">Security</p>
-                <p className="text-[#16151399]">184 Applications</p>
-              </span>
-            </div>
+            <Link href={"/pages/exploreMarketplace/productOverview"}>
+              <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <Image className="mx-auto" src={security} alt="" />
+                <hr className="" />
+                <br />
+                <span className="px-10 flex flex-col ">
+                  <p className="font-bold">Security</p>
+                  <p className="text-[#16151399]">184 Applications</p>
+                </span>
+              </div>
+            </Link>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
-              <Image className="mx-auto" src={storage} alt="" />
-              <hr className="" />
-              <br />
-              <span className="px-10 flex flex-col ">
-                <p className="font-bold">Storage</p>
-                <p className="text-[#16151399]">37 Applications</p>
-              </span>
-            </div>
+            <Link href={"/pages/exploreMarketplace/productOverview"}>
+              <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <Image className="mx-auto" src={storage} alt="" />
+                <hr className="" />
+                <br />
+                <span className="px-10 flex flex-col ">
+                  <p className="font-bold">Storage</p>
+                  <p className="text-[#16151399]">37 Applications</p>
+                </span>
+              </div>
+            </Link>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
-              <Image className="mx-auto" src={os} alt="" />
-              <hr className="" />
-              <br />
-              <span className="px-10 flex flex-col ">
-                <p className="font-bold">Operating Systems </p>
-                <p className="text-[#16151399]">74 Applications</p>
-              </span>
-            </div>
+            <Link href={"/pages/exploreMarketplace/productOverview"}>
+              <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <Image className="mx-auto" src={os} alt="" />
+                <hr className="" />
+                <br />
+                <span className="px-10 flex flex-col ">
+                  <p className="font-bold">Operating Systems </p>
+                  <p className="text-[#16151399]">74 Applications</p>
+                </span>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -128,68 +140,77 @@ const page = () => {
           <h2 className="font-semibold text-3xl py-10">Featured Apps</h2>
 
           <div className="bg-white flex flex-wrap 2xs:flex-col sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
-            <div className="basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={invidia} alt="...." />
-              <p className="py-4">NVIDIA AI Enterprise</p>
-              <p className="py-4 text-sm">
-                The End-to-End Software Platform for Production AI{" "}
-              </p>
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+            <div className="basis-1/5 p-10 md:border-r-0 lg:border-r-[1px]">
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={invidia} alt="...." />
+                <p className="py-4">NVIDIA AI Enterprise</p>
+                <p className="py-4 text-sm">
+                  The End-to-End Software Platform for Production AI{" "}
+                </p>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
 
-            <div className=" basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={invidia} alt="...." />
-              <p className="py-4">NVIDIA DGX Cloud </p>
-              <p className="py-4 text-sm">
-                Build your models faster on serverless AI
-              </p>
+            <div className=" basis-1/5 p-10 md:border-r-0 lg:border-r-[1px]">
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={invidia} alt="...." />
+                <p className="py-4">NVIDIA DGX Cloud </p>
+                <p className="py-4 text-sm">
+                  Build your models faster on serverless AI
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
 
-            <div className="basis-1/4 p-10 sm:border-r-0 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={fortinet} alt="...." />
-              <p className="py-4">FortiGate Next-Gen Firewall (BYOL) </p>
-              <p className="py-4 text-sm">
-                Comprehensive Security in One, Simplified Solution
-              </p>
+            <div className="basis-1/5 p-10 sm:border-r-0 md:border-r-0 lg:border-r-[1px]">
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={fortinet} alt="...." />
+                <p className="py-4">FortiGate Next-Gen Firewall (BYOL) </p>
+                <p className="py-4 text-sm">
+                  Comprehensive Security in One, Simplified Solution
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
-            <div className="basis-1/4 p-10 ">
-              <Image className="mx-auto" src={vmSeries} alt="...." />
-              <p className="py-4">
-                Palo Alto Networks VM-Series Next Generation Firewall{" "}
-              </p>
-              <p className="py-4 text-sm">
-                Protecting applications from threats and stopping data theft
-              </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>(0)</p>
-              </span>
+            <div className="basis-1/5 p-10 ">
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={vmSeries} alt="...." />
+                <p className="py-4">
+                  Palo Alto Networks VM-Series Next Generation Firewall{" "}
+                </p>
+                <p className="py-4 text-sm">
+                  Protecting applications from threats and stopping data theft
+                </p>
+
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>(0)</p>
+                </span>
+              </Link>
             </div>
           </div>
         </section>
@@ -203,63 +224,71 @@ const page = () => {
 
           <div className="bg-white flex flex-wrap 2xs:flex-col sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
             <div className="basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={oracle} alt="...." />
-              <p className="py-4">Siebel Cloud Manager (SCM)</p>
-              <p className="py-4 text-sm">Siebel Cloud Manager (SCM)</p>
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={oracle} alt="...." />
+                <p className="py-4">Siebel Cloud Manager (SCM)</p>
+                <p className="py-4 text-sm">Siebel Cloud Manager (SCM)</p>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
 
             <div className=" basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={resdiary} alt="...." />
-              <p className="py-4">ResDiary </p>
-              <p className="py-4 text-sm">
-                Achieve in-service efficiency with ResDiary Table
-              </p>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={resdiary} alt="...." />
+                <p className="py-4">ResDiary </p>
+                <p className="py-4 text-sm">
+                  Achieve in-service efficiency with ResDiary Table
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
 
             <div className="basis-1/4 p-10 sm:border-r-0 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={ethor} alt="...." />
-              <p className="py-4">eThor </p>
-              <p className="py-4 text-sm">
-                Order and Pay at Table Solution for Oracle Food &
-              </p>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={ethor} alt="...." />
+                <p className="py-4">eThor </p>
+                <p className="py-4 text-sm">
+                  Order and Pay at Table Solution for Oracle Food &
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
             <div className="basis-1/4 p-10 ">
-              <Image className="mx-auto" src={mondomenu} alt="...." />
-              <p className="py-4">MondoMenu</p>
-              <p className="py-4 text-sm">
-                Increase your average order value, improve customer
-              </p>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={mondomenu} alt="...." />
+                <p className="py-4">MondoMenu</p>
+                <p className="py-4 text-sm">
+                  Increase your average order value, improve customer
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>(0)</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>(0)</p>
+                </span>
+              </Link>
             </div>
           </div>
         </section>
@@ -273,65 +302,73 @@ const page = () => {
 
           <div className="bg-white flex flex-wrap 2xs:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
             <div className="basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={opkey} alt="...." />
-              <p className="py-4">Oracle Test Automation from Opkey</p>
-              <p className="py-4 text-sm">
-                Opkey provides cost savings, reduces risk, and fills gaps in
-              </p>
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={opkey} alt="...." />
+                <p className="py-4">Oracle Test Automation from Opkey</p>
+                <p className="py-4 text-sm">
+                  Opkey provides cost savings, reduces risk, and fills gaps in
+                </p>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
 
             <div className=" basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={fxloader} alt="...." />
-              <p className="py-4">FXLoader </p>
-              <p className="py-4 text-sm">
-                Load Currency Exchange Rates into Oracle ERP Cloud
-              </p>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={fxloader} alt="...." />
+                <p className="py-4">FXLoader </p>
+                <p className="py-4 text-sm">
+                  Load Currency Exchange Rates into Oracle ERP Cloud
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
 
             <div className="basis-1/4 p-10 sm:border-r-0 md:border-r-0 lg:border-r-[1px]">
-              <Image className="mx-auto" src={sso} alt="...." />
-              <p className="py-4">ESI JDE SSO </p>
-              <p className="py-4 text-sm">
-                A better way to do SSO: our revolutionary SSO solution for
-              </p>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={sso} alt="...." />
+                <p className="py-4">ESI JDE SSO </p>
+                <p className="py-4 text-sm">
+                  A better way to do SSO: our revolutionary SSO solution for
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>({0})</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>({0})</p>
+                </span>
+              </Link>
             </div>
             <div className="basis-1/4 p-10 ">
-              <Image className="mx-auto" src={motiveAI} alt="...." />
-              <p className="py-4"> Motiva AI for Oracle Eloqua</p>
-              <p className="py-4 text-sm">
-                Generative Artificial Intelligence to supercharge your email
-              </p>
+              <Link href={"/pages/exploreMarketplace/productOverview"}>
+                <Image className="mx-auto" src={motiveAI} alt="...." />
+                <p className="py-4"> Motiva AI for Oracle Eloqua</p>
+                <p className="py-4 text-sm">
+                  Generative Artificial Intelligence to supercharge your email
+                </p>
 
-              <span className="flex items-center">
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <MdStarBorder />
-                <p>(0)</p>
-              </span>
+                <span className="flex items-center">
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <MdStarBorder />
+                  <p>(0)</p>
+                </span>
+              </Link>
             </div>
           </div>
         </section>

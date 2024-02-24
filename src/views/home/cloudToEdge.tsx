@@ -8,7 +8,7 @@ import cloudIcon from "@/assets/svgs/home/cloudIcon.svg";
 import edgeIcon from "@/assets/svgs/home/edgeIcon.svg";
 const CloudToEdge = () => {
   return (
-    <section className="2xs:mt-60 sm:mt-10 md:mt-20 lg:mt-0 flex flex-wrap  lg:justify-between place-items-end sm:gap-4 lg:gap-0">
+    <section className="2xs:mt-60 sm:mt-10 md:mt-20  flex flex-wrap  lg:justify-between place-items-end sm:gap-4 lg:gap-0">
       <div className="md:basis-full  lg:basis-1/2 px-4 space-y-5 ">
         <Heading text="Trend : Cloud to Edge" />
 

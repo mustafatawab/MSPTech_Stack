@@ -17,6 +17,7 @@ module.exports = {
         blue: "#00A3FF",
       },
       screens: {
+        "2xs": "300px",
         xs: "350px",
         sm: "640px",
         // => @media (min-width: 640px) { ... }

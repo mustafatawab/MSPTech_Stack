@@ -33,27 +33,27 @@ const page = () => {
       <Navbar />
 
       {/* Hero */}
-      <div className="w-2/3 mx-auto mt-20 space-y-10 overflow-hidden">
-        <p className="font-[900] sm:text-[24px] lg:text-[64px] text-white">
+      <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10">
+        <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px] lg:text-[64px] text-white">
           A Universe of
           <br />
           Possiblity
         </p>
 
-        <p className="lg:font-[600] lg:text-[24px] text-white">
+        <p className="2xs:hidden sm:hidden md:block  lg:font-[600] lg:text-[24px] text-white">
           Quote, Order, Bill and Provision cloud products in one
           <br />
           place- all with one monthly bill.
         </p>
       </div>
-      <div className=" flex items-center justify-center md:mt-10 lg:mt-32 static  ">
+      <div className="2xs:hidden sm:hidden md:flex lg:flex items-center justify-center md:mt-10 lg:mt-32 static   ">
         <Image className="" src={mouse} alt="" />
       </div>
 
       <Wrapper>
         {/* Search  */}
-        <div className="flex items-center text-[#16151380] mt-20">
-          <span className="flex items-center bg-white py-1 px-2 border border-[#16151380] rounded-md w-1/3">
+        <div className="flex items-center text-[#16151380] 2xs:mt-40 sm:mt-40 md:mt-40 lg:mt-20">
+          <span className="flex items-center bg-white py-1 px-2 border border-[#16151380] rounded-md 2xs:w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
             <IoSearchSharp />
             <input
               type="text"
@@ -70,8 +70,8 @@ const page = () => {
           <h2 className="font-semibold text-3xl py-10">
             Oracle Cloud Infrastructure App Categories
           </h2>
-          <div className="flex flex-wrap gap-10 justify-between">
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 sm:basis-1/2 md:basis-1/3 lg:basis-1/6">
+          <div className="flex flex-wrap xs:fle-col sm:flex-col md:flex-row 2xs:justify-center  gap-10 md:justify-between">
+            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
               <Image className="mx-auto" src={cloudManagement} alt="" />
               <hr className="" />
               <br />
@@ -81,7 +81,7 @@ const page = () => {
               </span>
             </div>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 sm:basis-1/2 md:basis-1/3 lg:basis-1/6">
+            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
               <Image className="mx-auto" src={networking} alt="" />
               <hr className="" />
               <br />
@@ -91,7 +91,7 @@ const page = () => {
               </span>
             </div>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 sm:basis-1/2 md:basis-1/3 lg:basis-1/6">
+            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
               <Image className="mx-auto" src={security} alt="" />
               <hr className="" />
               <br />
@@ -101,7 +101,7 @@ const page = () => {
               </span>
             </div>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 sm:basis-1/2 md:basis-1/3 lg:basis-1/6">
+            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
               <Image className="mx-auto" src={storage} alt="" />
               <hr className="" />
               <br />
@@ -111,7 +111,7 @@ const page = () => {
               </span>
             </div>
 
-            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 sm:basis-1/2 md:basis-1/3 lg:basis-1/6">
+            <div className="bg-white shadow-xl rounded-md  py-10 space-y-5  sm:mx-auto md:mx-0 2xs:basis-full xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
               <Image className="mx-auto" src={os} alt="" />
               <hr className="" />
               <br />
@@ -127,7 +127,7 @@ const page = () => {
         <section>
           <h2 className="font-semibold text-3xl py-10">Featured Apps</h2>
 
-          <div className="bg-white flex sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
+          <div className="bg-white flex flex-wrap 2xs:flex-col sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
             <div className="basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
               <Image className="mx-auto" src={invidia} alt="...." />
               <p className="py-4">NVIDIA AI Enterprise</p>
@@ -201,7 +201,7 @@ const page = () => {
             <p>View 251 More</p>
           </span>
 
-          <div className="bg-white flex sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
+          <div className="bg-white flex flex-wrap 2xs:flex-col sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
             <div className="basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
               <Image className="mx-auto" src={oracle} alt="...." />
               <p className="py-4">Siebel Cloud Manager (SCM)</p>
@@ -271,7 +271,7 @@ const page = () => {
             <p>View 251 More</p>
           </span>
 
-          <div className="bg-white flex sm:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
+          <div className="bg-white flex flex-wrap 2xs:flex-col md:flex-col lg:flex-row justify-between items-center w-fit">
             <div className="basis-1/4 p-10 md:border-r-0 lg:border-r-[1px]">
               <Image className="mx-auto" src={opkey} alt="...." />
               <p className="py-4">Oracle Test Automation from Opkey</p>
@@ -338,15 +338,19 @@ const page = () => {
 
         {/* Some Text */}
         <div className="my-20 space-y-5">
-          <h2 className="text-[#1A1816] text-2xl font-bold">Learn Who are Our Partners</h2>
-          <p >
+          <h2 className="text-[#1A1816] text-2xl font-bold">
+            Learn Who are Our Partners
+          </h2>
+          <p>
             Oracle proudly supports a wide range of third-party solutions to
             accelerate and optimize your cloud and hybrid deployments. With new
             offerings continually added, our comprehensive network of partners
             ensures your cloud architecture on Oracle Cloud Infrastructure (OCI)
             can scale and evolve with your organizations needs.
           </p>
-          <button className="text-white p-3 bg-[#312D2A] rounded-md" >Our Partners</button>
+          <button className="text-white p-3 bg-[#312D2A] w-fit rounded-md 2xs:mx-auto md:mx-0">
+            Our Partners
+          </button>
         </div>
       </Wrapper>
     </>

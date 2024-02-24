@@ -9,16 +9,16 @@ const page = () => {
       <Navbar />
       {/* Hero Section */}
 
-      <div className="uppercase w-2/3 mx-auto mt-40 space-y-10 ">
-        <p className="font-[900]  sm:text-[24px] md:text-[32px] lg:text-[64px] text-white">
+      <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10 overflow-hidden">
+        <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px] lg:text-[64px] text-white">
           Amazing Support ,
           <br />
           Available 24/7
         </p>
       </div>
       <Wrapper>
-        <section className="mt-[450px] space-y-20">
-          <p className="text-blue text-center text-[24px] font-bold">
+        <section className="2xs:mt-28 xs:mt-40 sm:mt-60 md:mt-80 lg:mt-[450px] space-y-20">
+          <p className="text-blue text-center sm:text-lg md:text-[24px] font-bold">
             Explore the possibilities with the global MSPTech Stack Marketplace{" "}
             <br />
             featuring 30,000+ resellers, 400,000+ SMBs, and 10+ million end
@@ -29,7 +29,7 @@ const page = () => {
             Partner Suport
           </p>
 
-          <div className="flex justify-around  text-[24px]">
+          <div className="flex flex-wrap justify-around  text-[24px]">
             <span>Open a Ticket</span>
             <span>+123 456 789 909</span>
             <span>support@msptechstack.com</span>
@@ -40,22 +40,22 @@ const page = () => {
             <Heading text="With a 76 NPS, we provide world-class support" />
           </div>
 
-          <div className="flex justify-between items-center">
-            <div className="bg-blue rounded-xl p-10 w-fit flex flex-col justify-center items-center basis-1/4 text-center gap-5 ">
+          <div className="flex flex-wrap justify-between items-center gap-10 ">
+            <div className="bg-blue rounded-xl p-10  flex flex-col justify-center items-center 2xs:w-full sm:basis-2/3 md:1/3 lg:basis-1/4 text-center gap-5 ">
               <h3 className="font-bold text-[44px] text-white">500+</h3>
               <p className="text-white text-[16px]">
                 500+ certifications from Microsoft to CCNA
               </p>
             </div>
 
-            <div className="bg-blue rounded-xl p-10 w-fit flex flex-col justify-center items-center basis-1/4 text-center gap-5 ">
+            <div className="bg-blue rounded-xl p-10  flex flex-col justify-center items-center  2xs:w-full sm:basis-2/3 md:1/3 lg:basis-1/4 text-center gap-5 ">
               <h3 className="font-bold text-[44px] text-white">98.5%</h3>
               <p className="text-white text-[16px]">
                 98.5% fully automated provisioning
               </p>
             </div>
 
-            <div className="bg-blue rounded-xl p-10 w-fit flex flex-col justify-center items-center basis-1/4 text-center gap-5 ">
+            <div className="bg-blue rounded-xl p-10 flex flex-col justify-center items-center  2xs:w-full sm:basis-2/3 md:1/3 lg:basis-1/4 text-center gap-5 ">
               <h3 className="font-bold text-[44px] text-white">85%</h3>
               <p className="text-white text-[16px]">
                 85% of requests resolved in-house

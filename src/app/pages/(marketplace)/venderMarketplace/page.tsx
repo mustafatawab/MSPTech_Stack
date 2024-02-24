@@ -22,8 +22,8 @@ const page = () => {
       <Navbar />
       {/* Hero Section */}
 
-      <div className="uppercase w-2/3 mx-auto mt-40 space-y-10 overflow-hidden">
-        <p className="font-[900]  sm:text-[24px] md:text-[32px] lg:text-[64px] text-white">
+      <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10">
+        <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px]  lg:text-[64px] text-white">
           extend your reach.
           <br />
           Grow your business.
@@ -32,8 +32,8 @@ const page = () => {
 
       <Wrapper>
         {/* Simple Text */}
-        <div className="mt-[450px]">
-          <p className="text-blue text-center text-[24px] font-semibold">
+        <div className="xs:mt-32 sm:mt-36 md:mt-60  lg:mt-[550px]">
+          <p className="text-blue text-center 2xs:text-lg sm:text-xl md:text-2xl  lg:text-2xl font-semibold">
             Explore the possibilities with the global MSPTech Stack Marketplace{" "}
             <br />
             featuring 30,000+ resellers, 400,000+ SMBs, and 10+ million end
@@ -47,8 +47,8 @@ const page = () => {
             <Heading text="Why Venders Choose MSPTech Stack Marketplace" />
           </div>
 
-          <div className="flex flex-wrap justify-between gap-10 items-center text-center ">
-            <span className=" w-[360px] text-center bg-blue py-10 px-14 flex flex-col justify-center items-center gap-5 text-white rounded-xl shadow-xl">
+          <div className="flex flex-wrap  2xs:justify-center  md:justify-between lg:justify-between gap-10 items-center text-center ">
+            <span className="2xs:basis-full sm:basis-full md:basis-1/2 lg:basis-1/4 xl:basis-1/4  text-center bg-blue py-10 px-14 flex flex-col justify-center items-center gap-5 text-white rounded-xl shadow-xl">
               <Image src={icon1} alt="" />
               <h3 className="text-2xl font-semibold">Reach new SMB markets</h3>
               <p>
@@ -57,7 +57,7 @@ const page = () => {
               </p>
             </span>
 
-            <span className=" w-[360px] text-center bg-[#EFEFF1] py-10 px-14 flex flex-col justify-center items-center gap-5 text-black rounded-xl shadow-xl">
+            <span className="2xs:basis-full sm:basis-full md:basis-1/2 lg:basis-1/4 xl:basis-1/4 text-center bg-[#EFEFF1] py-10 px-14 flex flex-col justify-center items-center gap-5 text-black rounded-xl shadow-xl">
               <Image src={icon2} alt="" />
               <h3 className="text-2xl font-semibold">Strengthen your brand</h3>
               <p>
@@ -66,7 +66,7 @@ const page = () => {
               </p>
             </span>
 
-            <span className="w-[360px] text-center bg-blue py-10 px-14 flex flex-col justify-center items-center gap-5 text-white rounded-xl shadow-xl">
+            <span className="2xs:basis-full sm:basis-full md:basis-1/2 lg:basis-1/4 xl:basis-1/4  text-center bg-blue py-10 px-14 flex flex-col justify-center items-center gap-5 text-white rounded-xl shadow-xl">
               <Image src={icon3} alt="" />
               <h3 className="text-2xl font-semibold">Grow your business</h3>
               <p>
@@ -81,10 +81,10 @@ const page = () => {
         </section>
 
         {/*Section 3 - The easiest way to accelerate your go-to-market reach */}
-        <section className="flex items-end">
-          <div className="basis-2/3 space-y-10">
+        <section className="flex flex-wrap items-end">
+          <div className="xs:basis-full sm:basis-full md:basis-2/3 lg:basis-2/3 space-y-10">
             <Heading text="The easiest way to accelerate your go-to-market reach" />
-            <p className="text-[#3A3A3A] text-[22px]">
+            <p className="text-[#3A3A3A] xs:text-sm sm:text-sm md:text-xl lg:text-[22px]">
               MSPTech Stack Accelerate is an exclusive program that provides a
               clear <br />
               roadmap to help you effectively manage your GTM activities. Its
@@ -96,10 +96,15 @@ const page = () => {
               incentivized program. Establish a competitive edge in the <br />
               marketplace.
             </p>
-            <PrimaryButton text="Join the MSPTech Stack Marketplace" />
+            <div className="mx-auto xs:hidden md:block lg:block">
+              <PrimaryButton text="Join the MSPTech Stack Marketplace" />
+            </div>
           </div>
           <div>
             <Image src={growUpImage} alt="" />
+          </div>
+          <div className="xs:mx-auto my-5 xs:block md:hidden lg:hidden">
+            <PrimaryButton text="Join the MSPTech Stack Marketplace" />
           </div>
         </section>
 
@@ -141,22 +146,22 @@ const page = () => {
           <div className="flex flex-wrap justify-between items-center my-6">
             <span className="flex flex-col">
               <Image src={finance} alt="FInance" />
-              <p className="text-blue font-bold text-xl px-3"> Finance</p>
+              <p className="text-blue font-bold text-xl px-3 xs:text-center md:text-start"> Finance</p>
             </span>
 
             <span className="flex flex-col">
               <Image src={productivity} alt="productivity" />
-              <p className="text-blue font-bold text-xl px-3"> Productivity</p>
+              <p className="text-blue font-bold text-xl px-3 xs:text-center md:text-start"> Productivity</p>
             </span>
 
             <span className="flex flex-col">
               <Image src={continuity} alt="Continuity" />
-              <p className="text-blue font-bold text-xl px-3"> Continuity</p>
+              <p className="text-blue font-bold text-xl px-3 xs:text-center md:text-start"> Continuity</p>
             </span>
 
             <span className="flex flex-col">
               <Image src={infrastructure} alt="Infrastructure" />
-              <p className="text-blue font-bold text-xl px-3">
+              <p className="text-blue font-bold text-xl px-3 xs:text-center md:text-start">
                 {" "}
                 Infrastructure
               </p>
@@ -170,22 +175,22 @@ const page = () => {
         {/* section 6 - Interested in Joining the Marketplace? */}
 
         <section className="md:static lg:relative my-10 py-10">
-          <span className="w-1/2 block">
+          <span className="2xs:w-full md:w-full lg:w-1/2 ">
             <Heading text="Interested in Joining the Marketplace?" />
           </span>
-          <p className="text-[#4F4F4F] text-[24px]">
+          <p className="text-[#4F4F4F] 2xs:text-lg md:text-xl lg:text-2xl 2xs:w-full md:w-2/3 lg:w-1/2 my-5">
             To begin the vendor evaluation process, please fill out this bform.
             We will reach out with further questions and schedule a time to
             meet.
           </p>
           <div className="md:mt-20 lg:mt-40 bg-blue flex flex-wrap md:justify-center lg:justify-start md:items-center lg:items-center p-5 -z-30 rounded-2xl gap-10">
-            <span className="flex  items-end gap-4">
+            <span className="flex flex-wrap 2xs:justify-center  items-end gap-4">
               <div className="">
                 <Image src={image1} alt="" />
               </div>
-              <div className="flex md:static lg:relative ">
+              <div className="flex flex-wrap md:static lg:relative ">
                 <Image src={image2} className="z-20" alt="" />
-                <Image className="lg:-ml-48 lg:-mb-8" src={image3} alt="" />
+                <Image className="xs:-ml-48 xs:-mb-8" src={image3} alt="" />
               </div>
             </span>
             <VenderForm />

@@ -18,7 +18,7 @@ const page = async () => {
       <div className="-mt-52 z-20 relative ">
         <form
           action=""
-          className="mx-auto w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
+          className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
           <Heading text="Partnership" />
 

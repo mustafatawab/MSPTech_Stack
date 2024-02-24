@@ -18,12 +18,13 @@ const page = () => {
       <div className="-mt-52 z-20 relative ">
         <form
           action=""
-          className="mx-auto w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
+          className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
           <Heading text="Sign Up" />
           <span className="flex flex-col">
             <label htmlFor="">Your Full Name</label>
             <input
+              name="fullname"
               type="text"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -33,6 +34,7 @@ const page = () => {
           <span className="flex flex-col">
             <label htmlFor="">Email</label>
             <input
+              name="email"
               type="email"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -42,7 +44,8 @@ const page = () => {
           <span className="flex flex-col">
             <label htmlFor="">Create Username</label>
             <input
-              type="test"
+              name="username"
+              type="text"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               required
@@ -53,6 +56,7 @@ const page = () => {
             <label htmlFor="">Create Password</label>
             <input
               type="password"
+              name="password"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               required
@@ -62,16 +66,17 @@ const page = () => {
           <span className="flex flex-col">
             <label htmlFor="">Confirm Password</label>
             <input
+              name="confirmPassword"
               type="password"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               required
             />
           </span>
-          
+
           <Link
             className="bg-blue px-12 text-white font-semibold rounded-full py-2 mx-auto w-fit"
-            href={"/pages/signup/step2"}
+            href={"/pages/signup/step1"}
           >
             <button type="submit">Sign Up</button>
           </Link>

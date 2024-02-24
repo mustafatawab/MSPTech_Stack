@@ -31,16 +31,16 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div>
       <Heading text="Contact Us" />
       <p>
         Thank you for your interest in MSPTech Stack Platform. Complete the form
         below and some will reach out shortly to you..
       </p>
 
-      <div className=" w-full bg-blue rounded-2xl p-28 relative mt-10">
+      <div className=" w-full 2xs:bg-transparent sm:bg-transparent md:bg-blue rounded-2xl md:p-20 lg:p-28 relative mt-10">
         {/* <Image className="absolute" src={backgroud} alt=""/> */}
-        <p className="text-white w-[555px] ml-auto">
+        <p className="text-white  lg:w-96 ml-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
           voluptatum ipsa aliquid est laborum dolor unde? Labore ex sequi magni
           saepe quidem et quam? Soluta beatae odit necessitatibus voluptate
@@ -50,7 +50,7 @@ const Contact = () => {
         <form
           onSubmit={handleSubmit}
           action=""
-          className="bg-white flex flex-col gap-5 absolute top-0 -mt-7 p-7 rounded-lg md:w-[300px] lg:w-[460px] shadow-lg"
+          className="bg-white flex flex-col gap-5 absolute top-0 -mt-7 p-7 rounded-lg 2xs:w-full sm:w-80 md:w-[300px] lg:w-[460px] shadow-lg"
         >
           <input
             className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
@@ -85,7 +85,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

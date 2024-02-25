@@ -5,13 +5,18 @@ import cloudManagement from "@/assets/svgs/ExploreMarketplace/cloudmanagement.sv
 import mouse from "@/assets/svgs/mouse.svg";
 import Wrapper from "@/components/Wrapper/wrapper";
 import Link from "next/link";
+import background from "@/assets/svgs/headerBackground.svg";
+import Header from "@/components/Navbar/Header";
 const page = () => {
   return (
     <>
-      <Navbar />
-
+      {/* <Navbar /> */}
+      <Header />
       {/* HeroSection */}
       <section>
+      <div className="w-full">
+        <Image className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0" src={background} alt="" />
+      </div>
         <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10">
           <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px] lg:text-[64px] text-white">
             A Universe of

@@ -17,23 +17,34 @@ import mspCloudImage from "@/assets/svgs/home/AINetOps/cloudImage.svg";
 import teamImage from "@/assets/images/team.jpeg";
 import Contact from "@/views/Contact/contact";
 
+import background from "@/assets/svgs/headerBackground.svg";
+import Header from "@/components/Navbar/Header";
 const page = () => {
   return (
     <>
-      <Navbar />
-      <div className="uppercase w-2/3 mx-auto mt-40 space-y-10 overflow-hidden">
-        <p className="font-[900]  sm:text-[24px] md:text-[32px] lg:text-[64px] text-white">
-          What we are ?
-          <br />
-          What we do?
-        </p>
+      {/* <Navbar /> */}
+      <Header />
+      <section>
+        <div className="w-full">
+          <Image
+            className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0"
+            src={background}
+            alt=""
+          />
+        </div>
+        <div className="uppercase flex flex-col justify-center items-center md:mt-10 lg:mt-20   lg:space-y-10">
+          <p className="font-[900]  sm:text-[24px] md:text-[32px] lg:text-[64px] text-white">
+            What we are ?
+          </p>
+          <p className="font-[900]  sm:text-[24px] md:text-[32px] lg:text-[64px] text-white">What we do?</p>
 
-        <PrimaryButton text="Schedule a Demo" />
-      </div>
+          <PrimaryButton text="Schedule a Demo" />
+        </div>
+      </section>
 
       <Wrapper>
         {/*Section 2 - ABout us  */}
-        <section className="mt-92 flex justify-between mt-[300px] items-center">
+        <section className="2xs:mt-40 xs:mt-16 md:mt-20  xl:mt-96  flex 2xs:flex-col lg:flex-row items-center  lg:justify-between place-items-end sm:gap-4 lg:gap-0">
           <div className="basis-1/2">
             <Heading text="About Us" />
             <p className="text-[#707070] ">
@@ -147,66 +158,97 @@ const page = () => {
 
         {/* Section 5 - MSP Tech Stack Team */}
         <section className="space-y-5">
-          <Heading text="MSP Tech Stack Team"/>
+          <Heading text="MSP Tech Stack Team" />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
 
-
             <div className="flex flex-col justify-center items-center text-center gap-2">
-              <Image className="rounded-full" src={teamImage} width={200} alt="" />
+              <Image
+                className="rounded-full"
+                src={teamImage}
+                width={200}
+                alt=""
+              />
               <p className="font-bold text-[#4F4F4F] text-lg">Person Name</p>
               <p className="text-blue">His/Her Profession</p>
             </div>
           </div>
         </section>
-
 
         {/* section 6 - contact us */}
         <section className="mt-20">

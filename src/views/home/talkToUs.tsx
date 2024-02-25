@@ -9,7 +9,7 @@ const TalktoUs = () => {
         Thank you for your interest in MSPTech Stack. Complete the form below
         and some will reach out shortly to you..
       </p>
-      <div className=" w-full 2xs:p-3 2xs:bg-blue  rounded-2xl xs:p-3 sm:p-5 md:p-20 lg:p-28 relative mt-10">
+      <div className=" w-full 2xs:p-3 2xs:bg-blue  rounded-2xl xs:p-3 sm:p-5 md:p-20 lg:p-20 flex justify-start items-center relative mt-10">
         {/* <Image className="absolute" src={backgroud} alt=""/> */}
         <p className="text-white xs:max-w-[340px] md:w-full lg:w-[555px] ml-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora

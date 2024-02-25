@@ -20,25 +20,26 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="h-fit">
+    <div className="w-full">
       {/* Background Image */}
-      <Image
-        className=" w-fit absolute -z-10 "
+      {/* <Image
+        className=" bg-fixed w-fit absolute -z-10 "
         src={background}
         alt="backgorund"
-      />
+      /> */}
 
       {/* Navbar starts here */}
 
-      <nav className="w-full relative  flex items-center xs:justify-around sm:justify-around md:justify-between xs:text-sm sm:text-sm md:text-lg lg:text-lg xs:pr-4 sm:pr-4 md:pr-0 xs:px-0 sm:px-0 md:px-20 lg:px-20 text-white font-semibold z-20 ">
+      <nav className=" flex items-center justify-between 2xs:text-sm   md:text-lg 2xs:pr-4 sm:pr-2 md:pr-0    text-white font-semibold z-20 ">
+       
         <Link href={"/"}>
           <Image className="" src={logo} alt="logo" />
         </Link>
 
-        <ul className="2xs:hidden xs:hidden sm:hidden md:hidden lg:flex justify-between items-center gap-5 ">
+        <ul className="2xs:hidden md:flex lg:flex justify-between items-center gap-5 ">
           <li className="group relative cursor-pointer">
             <span
-              className="static flex gap-2"
+              className="static flex items-baseline gap-1"
               onMouseEnter={() => setIsOpen(true)}
             >
               Marketplace <Image src={arrow} alt="" />
@@ -64,7 +65,7 @@ const Navbar = () => {
           </li>
           <li className="group relative cursor-pointer">
             <span
-              className="static flex gap-2 "
+              className="static flex items-baseline gap-1 "
               onMouseEnter={() => setGrowth(true)}
             >
               Growth With Us <Image src={arrow} alt="" />
@@ -89,34 +90,33 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className=" 2xs:hidden sm:hidden lg:flex items-center gap-6">
-          <Link href={"/pages/signin"}>Login</Link>
-          <Link href={"/pages/signup"}>
-            <PrimaryButton text="Get Started" />
-          </Link>
+        <div className=" 2xs:hidden sm:hidden md:flex items-center gap-6">
+          <span>
+            <Link href={"/pages/signin"}>Login</Link>
+          </span>
+          <span className="bg-blue text-white px-3 py-1 rounded-full shrink-0">
+            <Link href={"/pages/signup"}>Get Started</Link>
+          </span>
           <Image src={dunya} alt="" />
           <Image onClick={() => setIsSearch(true)} src={search} alt="" />
         </div>
 
-        {toggle ? (
-          <div className="">
-            <IoMdClose
-              className="xs:block md:block lg:hidden text-4xl"
-              onClick={() => setToggle(false)}
-            />
-          </div>
-        ) : (
+        {!toggle && (
           <div className="flex items-center gap-5 mr-10">
             <FaSearch className="md:hidden" onClick={() => setIsSearch(true)} />
             <MdMenu
-              className="xs:block md:block lg:hidden text-4xl"
+              className="xs:block md:hidden lg:hidden text-4xl"
               onClick={() => setToggle(true)}
             />
           </div>
         )}
       </nav>
       {toggle && (
-        <div className="fixed bg-black xs:block  lg:hidden w-screen text-white p-2">
+        <div className="fixed top-0 left-0 bg-black w-full text-white p-2 transition-transform duration-300 transform translate-x-0 md:hidden">
+          <div className="flex justify-between items-center w-full ">
+            <h2 className="text-lg font-semibold">Menu</h2>
+            <IoMdClose className="text-4xl " onClick={() => setToggle(false)} />
+          </div>
           <ul className="p-2 text-sm">
             <li
               onClick={() => {
@@ -127,13 +127,13 @@ const Navbar = () => {
             >
               <p className="">Marketplace </p>
               {isOpen ? (
-                <MdArrowUpward className=" text-white" />
+                <MdArrowUpward className="text-white" />
               ) : (
                 <Image src={arrow} alt="" />
               )}
             </li>
             {isOpen && (
-              <div className=" px-4 py-2 space-y-1">
+              <div className="px-4 py-2 space-y-1">
                 <p className="">
                   <Link href={"/pages/exploreMarketplace"}>
                     Explore Marketplace
@@ -141,7 +141,7 @@ const Navbar = () => {
                 </p>
                 <p className="">
                   <Link href={"/pages/venderMarketplace"}>
-                    Marketplace for Venders
+                    Marketplace for Vendors
                   </Link>
                 </p>
               </div>
@@ -150,21 +150,20 @@ const Navbar = () => {
             <li
               onClick={() => {
                 setIsOpen(false);
-
                 setGrowth(true);
               }}
-              className="flex justify-between items-center "
+              className="flex justify-between items-center"
             >
               <p className="">Growth with Us </p>
               {growth ? (
-                <MdArrowUpward className=" text-white" />
+                <MdArrowUpward className="text-white" />
               ) : (
                 <Image src={arrow} alt="" />
               )}
             </li>
 
             {growth && (
-              <div className=" px-4 py-2 space-y-1">
+              <div className="px-4 py-2 space-y-1">
                 <p className="">
                   <Link href={"/pages/contact"}>Contact Us</Link>
                 </p>

@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="mt-10 gap-5">
       <Heading text="Contact Us" />
       <p>
         Thank you for your interest in MSPTech Stack Platform. Complete the form

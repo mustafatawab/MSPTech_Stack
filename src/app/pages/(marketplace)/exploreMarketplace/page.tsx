@@ -6,6 +6,8 @@ import Wrapper from "@/components/Wrapper/wrapper";
 import Link from "next/link";
 import { IoSearchSharp } from "react-icons/io5";
 import { MdStarBorder } from "react-icons/md";
+
+import background from "@/assets/svgs/headerBackground.svg";
 // App Categories
 import cloudManagement from "@/assets/svgs/ExploreMarketplace/cloudmanagement.svg";
 import networking from "@/assets/svgs/ExploreMarketplace/networking.svg";
@@ -27,13 +29,18 @@ import opkey from "@/assets/svgs/ExploreMarketplace/opkey.svg";
 import fxloader from "@/assets/svgs/ExploreMarketplace/fxloader.svg";
 import sso from "@/assets/svgs/ExploreMarketplace/sso.svg";
 import motiveAI from "@/assets/svgs/ExploreMarketplace/motive.ai.svg";
+import Header from "@/components/Navbar/Header";
 
 const page = () => {
   return (
     <>
-      <Navbar />
-
+      {/* <Navbar /> */}
+      <Header />
       {/* Hero */}
+      <section>
+      <div className="w-full">
+        <Image className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0" src={background} alt="" />
+      </div>
       <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10">
         <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px] lg:text-[64px] text-white">
           A Universe of
@@ -50,6 +57,7 @@ const page = () => {
       <div className="2xs:hidden sm:hidden md:flex lg:flex items-center justify-center md:mt-10 lg:mt-32 static   ">
         <Image className="" src={mouse} alt="" />
       </div>
+      </section>
 
       <Wrapper>
         {/* Search  */}

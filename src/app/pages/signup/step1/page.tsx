@@ -1,8 +1,11 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import background from "@/assets/images/background.jpeg";
 import Heading from "@/components/Heading/heading";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 
 const country = [
   "United States",
@@ -14,7 +17,61 @@ const country = [
   "Bangladesh",
 ];
 
-const page = async () => {
+const page = () => {
+  const router = useRouter();
+  const [businessContactDetails, setbusinessContactDetails] = useState({
+    companyName: "",
+    businessEmail: "",
+    domain: "",
+    partof_franchise: '',
+
+    city: "",
+    state: "",
+    postalCode: "",
+    currency: "",
+    headquater_address: "",
+    phoneNumber: "",
+  })
+
+  const handleChange = (e: any) => {
+
+    const { name, value } = e.target;
+    console.log('Name ', name, " value ", value);
+
+    setbusinessContactDetails({
+      ...businessContactDetails,
+      [name]: value
+    })
+  }
+
+
+  // const handleRadioChange = (e: any) => {
+  //   const { name, value } = e.target;
+  //   setbusinessContactDetails({
+  //     ...businessContactDetails,
+  //     [name]: value === "yes", // Convert value to boolean
+  //   });
+  // };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    console.log(businessContactDetails);
+    try {
+      const response = await axios.post('http://localhost:3000/api/business/contact', 
+                                          businessContactDetails);
+      
+      console.log(response.data);
+
+      router.push("/pages/signup/step1/step2")
+      
+    } catch (error: any) {
+      throw new Error(error.message)
+
+    }
+  }
+
+
+
   return (
     <main>
       <div className="bg-blue relative w-screen">
@@ -25,37 +82,46 @@ const page = async () => {
         />
       </div>
 
-      <div className="-mt-52 z-20 relative ">
+      <div className="-mt-52 z-20 relative "  >
         <form
+          onSubmit={handleSubmit}
           action=""
           className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
           <Heading text="Contact Info" />
 
           <span className="flex flex-col">
-            <label htmlFor="">Company Name</label>
+            <label >Company Name</label>
             <input
+              name="companyName"
               type="text"
               placeholder=""
+              onChange={handleChange}
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               required
             />
           </span>
           <span className="flex flex-col">
-            <label htmlFor="">Email Address</label>
+            <label >Email Address</label>
             <input
+              name="businessEmail"
               type="email"
+              value={businessContactDetails.businessEmail}
               placeholder=""
+              onChange={handleChange}
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               required
             />
           </span>
 
           <span className="flex flex-col">
-            <label htmlFor="">Company Domain</label>
+            <label >Company Domain</label>
             <input
+              name="domain"
+              value={businessContactDetails.domain}
               type="text"
               placeholder=""
+              onChange={handleChange}
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               required
             />
@@ -65,14 +131,14 @@ const page = async () => {
             <p>Are you part of Franchise ? </p>
             <span className="flex justify-center items-center gap-3">
               <label htmlFor="yes">Yes</label>
-              <input type="radio" id="yes" name="franchise" />
+              <input type="radio" id="yes" name="partof_franchise" value='yes' onChange={handleChange} />
             </span>
             <span className="flex justify-center items-center gap-3">
               <label htmlFor="no">No</label>
-              <input type="radio" id="no" name="franchise" />
+              <input type="radio" id="no" name="partof_franchise" value='no' onChange={handleChange} />
             </span>
           </span>
-
+          {/* 
           <select
             name="country"
             id="country"
@@ -88,47 +154,27 @@ const page = async () => {
               Select Country
             </option>
 
-            {country.map((cntry) => (
-              <>
+            {country.map((cntry, i) => (
+              <div key={i}>
                 <option
                   className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
                   value={cntry}
                 >
                   {cntry}
                 </option>
-              </>
+              </div>
             ))}
 
-            {/* <option
-              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-              value="country"
-            >
-              Pakistan
-            </option>
-            <option
-              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-              value="country"
-            >
-              USA
-            </option>
-            <option
-              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-              value="country"
-            >
-              India
-            </option>
-            <option
-              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-              value="country"
-            >
-              Other
-            </option> */}
-          </select>
+
+          </select> */}
 
           <div className="flex justify-between ">
             <span className="flex flex-col  w-1/5">
-              <label htmlFor="">City</label>
+              <label >City</label>
               <input
+                value={businessContactDetails.city}
+                onChange={handleChange}
+                name="city"
                 type="text"
                 placeholder=""
                 className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -136,8 +182,11 @@ const page = async () => {
             </span>
 
             <span className="flex flex-col w-1/5">
-              <label htmlFor="">State</label>
+              <label >State</label>
               <input
+                name="state"
+                value={businessContactDetails.state}
+                onChange={handleChange}
                 type="text"
                 placeholder=""
                 className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -145,8 +194,11 @@ const page = async () => {
             </span>
 
             <span className="flex flex-col w-1/5">
-              <label htmlFor="">Postal Code</label>
+              <label >Postal Code</label>
               <input
+                name="postalCode"
+                value={businessContactDetails.postalCode}
+                onChange={handleChange}
                 type="text"
                 placeholder=""
                 className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -154,17 +206,25 @@ const page = async () => {
             </span>
 
             <span className="flex flex-col w-1/5">
-              <label htmlFor="">Currency</label>
+              <label >Currency</label>
               <input
+                name="currency"
+                value={businessContactDetails.currency}
+                onChange={handleChange}
                 type="text"
                 placeholder=""
                 className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
               />
             </span>
           </div>
+
           <span className="flex flex-col ">
-            <label htmlFor="">Company Headquater Address</label>
+            <label >Company Headquater Address</label>
             <input
+              id="headquater_address"
+              name="headquater_address"
+              value={businessContactDetails.headquater_address}
+              onChange={handleChange}
               type="text"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -173,8 +233,11 @@ const page = async () => {
           </span>
 
           <span className="flex flex-col ">
-            <label htmlFor="">Company Phone</label>
+            <label >Company Phone</label>
             <input
+              name="phoneNumber"
+              value={businessContactDetails.phoneNumber}
+              onChange={handleChange}
               type="number"
               placeholder=""
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -182,14 +245,10 @@ const page = async () => {
             />
           </span>
 
-         
-          <Link
+          <button type="submit"
             className="bg-blue px-12 text-white font-semibold rounded-full py-2 mx-auto w-fit"
-            href={"/pages/signup/step2"}
-          >
-            <button>Continue</button>
-          </Link>
-          
+          >Continue</button>
+
         </form>
       </div>
     </main>

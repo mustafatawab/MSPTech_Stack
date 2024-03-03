@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import logo from "@/assets/svgs/logo.svg";
@@ -11,6 +11,7 @@ const Header = () => {
   const [state, setState] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
   const [showMarketplaceDropdown, setShowMarketplaceDropdown] = useState(false);
+  const [showGrowWithUsDropdown, setShowGrowWithUsDropdown] = useState(false);
 
   const navigation = [
     {
@@ -18,24 +19,33 @@ const Header = () => {
       path: "#",
       subItems: [
         { title: "Explore Marketplace", path: "/pages/exploreMarketplace" },
+      ],
+    },
+    {
+      title: "Grow With Us",
+      path: "#",
+      subItems: [
         { title: "Marketplace for Vendors", path: "/pages/venderMarketplace" },
       ],
     },
-    { title: "Grow with Us", path: "#" },
     { title: "About", path: "/pages/about" },
     { title: "Support", path: "/pages/support" },
   ];
 
   const toggleMarketplaceDropdown = () => {
     setShowMarketplaceDropdown(!showMarketplaceDropdown);
+    setShowGrowWithUsDropdown(false);
   };
-
+  const toggleGrowWithUsDropdown = () => {
+    setShowGrowWithUsDropdown(!showGrowWithUsDropdown);
+    setShowMarketplaceDropdown(false);
+  };
   return (
     <nav className="bg-transparent text-white w-full top-0 z-20 text-lg pr-5  ">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:px-8 lg:flex">
         <div className="flex items-center justify-between py-3 lg:py-4 lg:block text-white">
           <Link href="/">
-            <Image  src={logo} alt="Float UI logo" />
+            <Image src={logo} alt="Float UI logo" />
           </Link>
           <div className="lg:hidden text-white">
             <button
@@ -94,13 +104,16 @@ const Header = () => {
               </li>
               <li className="mt-8 lg:mt-0 2xs:w-full lg:w-fit">
                 <Link
-                  href="/pages/signup" 
+                  href="/pages/signup"
                   className="py-3 px-4 text-center text-white   bg-blue/80 hover:bg-blue rounded-full shadow block lg:inline "
                 >
                   Get Started
                 </Link>
               </li>
-              <li onClick={() => setIsSearch(!isSearch)} className="mt-4 lg:mt-0 ">
+              <li
+                onClick={() => setIsSearch(!isSearch)}
+                className="mt-4 lg:mt-0 "
+              >
                 <FaSearch />
               </li>
             </ul>
@@ -108,12 +121,16 @@ const Header = () => {
           <div className="flex-1">
             <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
               {navigation.map((item, idx) => (
-                <li  onMouseLeave={(e) => {
+                <li
+                  onMouseLeave={(e) => {
                     e.preventDefault();
                     if (item.title === "Marketplace") {
                       toggleMarketplaceDropdown();
                     }
-                  }} key={idx} className="text-white font-semibold relative">
+                  }}
+                  key={idx}
+                  className="text-white font-semibold relative"
+                >
                   <Link
                     href={item.path}
                     onMouseEnter={(e) => {
@@ -121,12 +138,34 @@ const Header = () => {
                       if (item.title === "Marketplace") {
                         toggleMarketplaceDropdown();
                       }
+                      if (item.title === "Grow With Us") {
+                        toggleGrowWithUsDropdown();
+                      }
                     }}
                   >
-
-                    <p className="flex items-baseline gap-1 justify-between">{item.title}  {item.title === "Marketplace" ? <Image src={arrow} alt=""/> : ""} </p>
+                    <p className="flex items-baseline gap-1 justify-between">
+                      {item.title}{" "}
+                      {item.title === "Marketplace" ||
+                      item.title === "Grow With Us" ? (
+                        <Image src={arrow} alt="" />
+                      ) : (
+                        ""
+                      )}{" "}
+                    </p>
                   </Link>
                   {item.title === "Marketplace" && showMarketplaceDropdown && (
+                    <ul className="absolute block 2xs:w-full lg:w-52   p-2 top-full left-0 z-20  bg-white text-black shadow-md rounded-md py-2 space-y-2 opacity-100 transition-all duration-300">
+                      {item.subItems?.map((subItem, subIdx) => (
+                        <li key={subIdx}>
+                          <Link href={subItem.path}>
+                            <p className="text-gray-800">{subItem.title}</p>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {item.title === "Grow With Us" && showGrowWithUsDropdown && (
                     <ul className="absolute block 2xs:w-full lg:w-52   p-2 top-full left-0 z-20  bg-white text-black shadow-md rounded-md py-2 space-y-2 opacity-100 transition-all duration-300">
                       {item.subItems?.map((subItem, subIdx) => (
                         <li key={subIdx}>

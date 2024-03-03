@@ -6,7 +6,7 @@ import mspCloudImage from "@/assets/svgs/home/AINetOps/cloudImage.svg";
 
 const AiNetOps = () => {
   return (
-    <section className="py-20 mt-20 flex flex-wrap justify-between gap-10">
+    <section className="py-20 mt-20 flex flex-wrap justify-between gap-10 w-full">
       <div className="md:basis-full lg:basis-1/2 flex flex-col justify-around ">
         <Heading text="MSPTech Stack AINetOps" />
         <p className="text-[18px]">

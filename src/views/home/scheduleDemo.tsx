@@ -8,7 +8,7 @@ import image3 from "@/assets/svgs/home/scheduleDemo/image3.svg";
 
 const ScheduleDemo = () => {
   return (
-    <section className="w-full lg:relative">
+    <section className="w-full lg:relative space-y-12">
       <Heading text="Schedule a Demo" />
       <div className="bg-blue flex flex-wrap  md:justify-center xs:justify-center lg:justify-start xs:items-center md:items-center lg:items-end p-5 -z-30 rounded-2xl gap-10">
         <div className="">

@@ -13,18 +13,22 @@ const page = () => {
       {/* <Navbar /> */}
       <Header />
       {/* HeroSection */}
-      <section>
-      <div className="w-full">
-        <Image className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0" src={background} alt="" />
-      </div>
-        <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10">
-          <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px] lg:text-[64px] text-white">
+      <section className="">
+        <div className="w-full">
+          <Image
+            className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0 "
+            src={background}
+            alt=""
+          />
+        </div>
+        <div className="2xs:mt-2 sm:mt-2 md:mt-10 lg:mt-32 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto   xs:space-x-1 md:space-y-5 lg:space-y-10">
+          <p className="2xs:font-bold sm:font-bold  lg:font-[900] 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
             A Universe of
             <br />
             Possiblity
           </p>
 
-          <p className="2xs:hidden sm:hidden md:block  lg:font-[600] lg:text-[24px] text-white">
+          <p className="2xs:hidden sm:block md:block  lg:font-[600] lg:text-[24px] text-white">
             Quote, Order, Bill and Provision cloud products in one
             <br />
             place- all with one monthly bill.
@@ -38,8 +42,8 @@ const page = () => {
       <Wrapper>
         {/* Main Section */}
 
-        <section className="flex flex-wrap justify-between  2xs:flex-col md:flex-row sm:flex-col   lg:flex-row gap-4">
-          <div className="w-3/5 flex flex-col justify-start items-start gap-5 ">
+        <section className="flex flex-wrap justify-between  2xs:flex-col md:flex-row sm:flex-col   lg:flex-row gap-4  ">
+          <div className="w-3/5 flex flex-col justify-start items-start gap-5 lg:mt-40">
             <div className="flex justify-start items-center gap-3">
               <Image src={cloudManagement} alt="Cloud management" />
               <h1 className="font-bold text-3xl">Cloud Management</h1>
@@ -149,7 +153,7 @@ const page = () => {
               </Link>
 
               <Link
-                href={"#"}
+                href={"/pages/venderMarketplace"}
                 className="w-fit  bg-blue text-white rounded-3xl 2xs:px-2 sm:px-2 md:px-2 py-1 lg:px-6 lg:py-2 2xs:text-sm "
               >
                 Schedule a Demo
@@ -157,7 +161,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="2xs:w-full md:w-1/4 bg-[#EFEFF1] p-10 text-[#3A3A3A]">
+          <div className="2xs:w-full md:w-1/4 bg-[#EFEFF1] p-10 text-[#3A3A3A] mt-40">
             <h3 className="font-semibold text-2xl ">
               More Information and Resource
             </h3>

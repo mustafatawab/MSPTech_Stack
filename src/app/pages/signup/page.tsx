@@ -7,7 +7,7 @@ import Heading from "@/components/Heading/heading";
 const page = () => {
   return (
     <>
-      <div className="bg-blue relative">
+      <div className="bg-blue relative w-screen">
         <Image
           className="opacity-35 w-full h-[400px]"
           src={background}

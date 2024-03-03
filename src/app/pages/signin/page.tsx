@@ -5,10 +5,10 @@ import Heading from "@/components/Heading/heading";
 import Link from "next/link";
 const page = () => {
   return (
-    <main>
-      <div className="bg-blue relative">
+    <main className="">
+      <div className="bg-blue relative w-screen">
         <Image
-          className="opacity-35 w-full h-[400px]"
+          className="opacity-35 w-full h-[400px] object-cover "
           src={background}
           alt="Background Image"
         />

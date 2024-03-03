@@ -6,7 +6,7 @@ import growUpImage from "@/assets/svgs/home/growUp.svg";
 
 const GoToMarket = () => {
   return (
-    <section className="flex flex-wrap items-end">
+    <section className="flex flex-wrap items-end w-full">
       <div className="xs:basis-full sm:basis-full md:basis-2/3 lg:basis-2/3 space-y-10">
         <Heading text="The easiest way to accelerate your go-to-market reach" />
         <p className="text-[#3A3A3A] xs:text-sm sm:text-sm md:text-xl lg:text-[22px]">

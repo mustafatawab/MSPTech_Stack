@@ -17,7 +17,7 @@ const country = [
 const page = async () => {
   return (
     <main>
-      <div className="bg-blue relative">
+      <div className="bg-blue relative w-screen">
         <Image
           className="opacity-35 w-full h-[400px]"
           src={background}

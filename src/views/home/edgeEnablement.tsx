@@ -16,7 +16,7 @@ const EdgeEnablement = () => {
         rapidly.
       </p>
 
-      <div className="xs:max-w-[320px] sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl relative -z-20 bg-white p-10 rounded-2xl  shadow-xl ">
+      <div className="xs:max-w-[320px] sm:max-w-screen-sm md:max-w-screen-md lg:max-w-full  relative -z-20 bg-white p-10 rounded-2xl  shadow-xl ">
         <div className="absolute -z-10 mx-auto  flex justify-between items-cente 2xs:hidden sm:hidden md:hidden lg:flex">
           <Image src={arrow} alt="" />
           <Image src={arrow} alt="" />

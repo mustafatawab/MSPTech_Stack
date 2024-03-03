@@ -5,30 +5,30 @@ import React from "react";
 import Image from "next/image";
 
 import background from "@/assets/svgs/headerBackground.svg";
+import Header from "@/components/Navbar/Header";
 
 const page = () => {
   return (
-    <main>
-      <Navbar />
+    <main className="">
+      {/* <Navbar /> */}
+      <Header />
       {/* Hero Section */}
-      <section>
-        <div className="w-full">
+      <section className="">
+        <div className="w-full   ">
           <Image
-            className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0"
+            className="absolute -z-10 bg-fixed object-cover   w-full  top-0 left-0"
             src={background}
             alt=""
           />
         </div>
-        <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10 overflow-hidden">
-          <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px] lg:text-[64px] text-white">
-            Amazing Support ,
-            <br />
-            Available 24/7
-          </p>
+        <div className="2xs:mt-0 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10 overflow-hidden">
+          <p className=" font-bold 2xs:text-lg sm:text-2xl md:text-5xl text-white">Amazing Support ,</p>
+
+          <p className="font-bold 2xs:text-lg sm:text-2xl md:text-5xl text-white"> Available 24/7</p>
         </div>
       </section>
       <Wrapper>
-        <section className="2xs:mt-28 xs:mt-40 sm:mt-60 md:mt-96 lg:mt-[500px] space-y-20">
+        <section className="2xs:mt-10 xs:mt-16 sm:mt-52 md:mt-[370px] lg:mt-[450px] xl:mt-[570px] space-y-20">
           <p className="text-blue text-center sm:text-lg md:text-[24px] font-bold">
             Explore the possibilities with the global MSPTech Stack Marketplace{" "}
             <br />

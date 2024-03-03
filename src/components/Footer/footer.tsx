@@ -9,7 +9,7 @@ import Link from "next/link";
 import send from "../../assets/svgs/icons/send.svg";
 const Footer = () => {
   return (
-    <footer className="mt-52 object-cover bg-[#0455B7] text-white flex flex-wrap grow justify-between p-10">
+    <footer className="mt-80 object-cover bg-[#0455B7] text-white flex flex-wrap grow justify-between p-10">
       <div className="space-y-5 basis-2/5">
         <Image src={logo} alt="" />
         <span>

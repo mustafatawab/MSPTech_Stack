@@ -6,7 +6,7 @@ import newsImage1 from "@/assets/svgs/home/news/image1.svg";
 
 const News = () => {
   return (
-    <section className="py-20 w-full">
+    <section className="py-20 w-full space-y-10 ">
       <Heading text="News" />
       <div className="flex flex-wrap justify-between">
         <div className=" shadow-xl w-[380px]  bg-[#FFFFFF] rounded-b-3xl">

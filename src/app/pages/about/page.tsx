@@ -44,7 +44,7 @@ const page = () => {
 
       <Wrapper>
         {/*Section 2 - ABout us  */}
-        <section className="2xs:mt-40 xs:mt-16 md:mt-20  xl:mt-96  flex 2xs:flex-col lg:flex-row items-center  lg:justify-between place-items-end sm:gap-4 lg:gap-0">
+        <section className="2xs:mt-40 xs:mt-16 md:mt-60 lg:mt-72  xl:mt-[450px]  flex 2xs:flex-col lg:flex-row items-center  lg:justify-between place-items-end sm:gap-4 lg:gap-0 mb-20">
           <div className="basis-1/2">
             <Heading text="About Us" />
             <p className="text-[#707070] ">

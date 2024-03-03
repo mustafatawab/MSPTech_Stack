@@ -34,7 +34,7 @@ const page = () => {
           />
         </div>
         <div className="2xs:mt-2 sm:mt-2 md:mt-10 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center sm:text-center md:text-start xs:w-full md:w-fit lg:w-2/3 mx-auto  lg:mt-20 xs:space-x-1 md:space-y-5 lg:space-y-10">
-          <p className="2xs:font-semibold sm:font-semibold md:font-bold lg:font-[900] sm:text-[24px]  lg:text-[64px] text-white">
+          <p className="font-bold sm:text-[30px]  md:text-[64px] text-white">
             extend your reach.
             <br />
             Grow your business.
@@ -44,7 +44,7 @@ const page = () => {
 
       <Wrapper>
         {/* Simple Text */}
-        <div className="xs:mt-32 sm:mt-36 md:mt-60  lg:mt-[550px]">
+        <div className="2xs:mt-32 sm:mt-36 md:mt-64  lg:mt-[500px]">
           <p className="text-blue text-center 2xs:text-lg sm:text-xl md:text-2xl  lg:text-2xl font-semibold">
             Explore the possibilities with the global MSPTech Stack Marketplace{" "}
             <br />
@@ -204,14 +204,14 @@ const page = () => {
             We will reach out with further questions and schedule a time to
             meet.
           </p>
-          <div className="md:mt-20 lg:mt-40 bg-blue flex flex-wrap md:justify-center lg:justify-start md:items-center lg:items-center p-5 -z-30 rounded-2xl gap-10">
+          <div className="md:mt-20 lg:mt-40 bg-blue flex flex-wrap md:justify-center lg:justify-start md:items-center lg:items-center p-5 -z-30 rounded-2xl gap-10 w-full">
             <span className="flex flex-wrap 2xs:justify-center  items-end gap-4">
               <div className="">
                 <Image src={image1} alt="" />
               </div>
-              <div className="flex flex-wrap md:static lg:relative ">
+              <div className="flex flex-wrap items-center justify-center mx-auto md:static lg:relative ">
                 <Image src={image2} className="z-20" alt="" />
-                <Image className="xs:-ml-48 xs:-mb-8" src={image3} alt="" />
+                <Image className=" 2xs:-ml-48 2xs:-mb-8 " src={image3} alt="" />
               </div>
             </span>
             <VenderForm />

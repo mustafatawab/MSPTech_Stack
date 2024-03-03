@@ -3,9 +3,9 @@ import React from "react";
 
 const TalktoUs = () => {
   return (
-    <section className="">
+    <section className="space-y-10 w-full">
       <Heading text="Talk to Us !" />
-      <p className="py-2 my-3">
+      <p className="pb-10 ">
         Thank you for your interest in MSPTech Stack. Complete the form below
         and some will reach out shortly to you..
       </p>

@@ -13,14 +13,14 @@ const HeroSection = () => {
       <div className="w-full">
         <Image className="absolute -z-10 bg-fixed  object-contain w-full top-0 left-0" src={background} alt="" />
       </div>
-      <div className=" z-20 2xs:-mt-60 sm:-mt-24  md:-mt-48 lg:mt-0 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center      xs:space-x-1 md:space-y-5 lg:space-y-10 ">
-        <p className="font-bold 2xs:text-xl xs:text-3xl sm:text-5xl md:text-6xl text-white text-start">
+      <div className="2xs:p-0 lg:px-20 z-20 2xs:-mt-60 sm:-mt-52  md:-mt-56 lg:-mt-20 2xs:pr-10 sm:pr-8 md:pr-0 lg:pr-0 2xs:text-center      xs:space-x-1 md:space-y-5 lg:space-y-10 ">
+        <p className="font-bold 2xs:text-lg xs:text-2xl sm:text-5xl md:text-6xl text-white text-start">
           One cloud marketplace.
           <br />
           infinite growth
         </p>
 
-        <p className="2xs:hidden sm:block md:block  lg:font-[600] lg:text-[24px] text-white text-start">
+        <p className="2xs:hidden  md:block  lg:font-[600] lg:text-[24px] text-white text-start">
           Buy, Sell and manage cloud solutions with the
           <br />
           Marketplace that Fuels your Business

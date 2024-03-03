@@ -37,7 +37,7 @@ const VenderForm = () => {
     <form
       onSubmit={handleSubmit}
       action=""
-      className="z-20 bg-white flex flex-col gap-5 md:static lg:absolute right-5   mr-10 p-7 rounded-lg md:w-[300px] lg:w-[460px] shadow-lg"
+      className="z-20 bg-white flex flex-col gap-5 md:static lg:absolute right-5   mr-10 p-7 rounded-lg 2xs:w-full  md:w-2/3 lg:w-[460px] shadow-lg mx-auto"
     >
       <input
         className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"

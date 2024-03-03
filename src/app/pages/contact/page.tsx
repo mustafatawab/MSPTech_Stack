@@ -39,7 +39,7 @@ const page = () => {
       </section>
 
       <Wrapper>
-        <section className="2xs:mt-32 xs:mt-28 sm:mt-10 md:mt-80 lg:mt-[600px]">
+        <section className="2xs:mt-32 xs:mt-28 sm:mt-12 md:mt-80 lg:mt-[500px]">
           <Contact />
         </section>
 

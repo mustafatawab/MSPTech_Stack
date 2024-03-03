@@ -18,7 +18,7 @@ const Header = () => {
       path: "#",
       subItems: [
         { title: "Explore Marketplace", path: "/pages/exploreMarketplace" },
-        { title: "Marketplace for Vendors", path: "/pages/vendorMarketplace" },
+        { title: "Marketplace for Vendors", path: "/pages/venderMarketplace" },
       ],
     },
     { title: "Grow with Us", path: "#" },
@@ -31,11 +31,11 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-transparent text-white w-full top-0 z-20">
+    <nav className="bg-transparent text-white w-full top-0 z-20 text-lg pr-5  ">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:px-8 lg:flex">
         <div className="flex items-center justify-between py-3 lg:py-4 lg:block text-white">
           <Link href="/">
-            <Image src={logo} alt="Float UI logo" />
+            <Image  src={logo} alt="Float UI logo" />
           </Link>
           <div className="lg:hidden text-white">
             <button
@@ -127,7 +127,7 @@ const Header = () => {
                     <p className="flex items-baseline gap-1 justify-between">{item.title}  {item.title === "Marketplace" ? <Image src={arrow} alt=""/> : ""} </p>
                   </Link>
                   {item.title === "Marketplace" && showMarketplaceDropdown && (
-                    <ul className="absolute block 2xs:w-full lg:w-52  p-2 top-full left-0 z-20  bg-white text-black shadow-md rounded-md py-2 space-y-1 opacity-100 transition-all duration-300">
+                    <ul className="absolute block 2xs:w-full lg:w-52   p-2 top-full left-0 z-20  bg-white text-black shadow-md rounded-md py-2 space-y-2 opacity-100 transition-all duration-300">
                       {item.subItems?.map((subItem, subIdx) => (
                         <li key={subIdx}>
                           <Link href={subItem.path}>

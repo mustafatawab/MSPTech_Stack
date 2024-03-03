@@ -14,14 +14,11 @@ import HeroSection from "./hersection";
 const Main = () => {
   return (
     <Wrapper>
-    
-
       {/* Hero Section */}
       <HeroSection />
 
       {/* Section 1 - Cloud To Edge */}
       <CloudToEdge />
-
 
       {/* Section 2 - Services */}
       <Services />
@@ -37,7 +34,6 @@ const Main = () => {
 
       {/* Section 6 - MSPTech Stack AINetOps */}
       <AiNetOps />
-
 
       {/*Section 7 - The easiest way to accelerate your go-to-market reach */}
       <GoToMarket />

@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import { Connect } from "@/lib/dbConfig";
-import BusinessModel from "@/models/businessModel";
+import BusinessModel from "@/models/businessContact";
 
 Connect();
 

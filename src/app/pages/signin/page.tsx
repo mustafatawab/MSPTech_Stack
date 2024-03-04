@@ -7,7 +7,6 @@ import background from "@/assets/images/background.jpeg";
 import Heading from "@/components/Heading/heading";
 import Link from "next/link";
 import toast from "react-hot-toast";
-import User from "@/models/userModel";
 const Login = () => {
 
   const router = useRouter();

@@ -1,9 +1,8 @@
 import { NextResponse, NextRequest } from "next/server";
 import { Connect } from "@/lib/dbConfig";
-import BusinessModel from "@/models/businessModel";
-
+import BusinessContact from "@/models/businessContact";
+import Business from "@/models/business";
 Connect();
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -12,7 +11,7 @@ export async function POST(request: NextRequest) {
       businessEmail,
       domain,
       partof_franchise,
-      country,
+      // country,
       city,
       state,
       postalCode,
@@ -23,12 +22,12 @@ export async function POST(request: NextRequest) {
 
     console.log(body);
 
-    const business = new BusinessModel({
+    const business = new BusinessContact({
       companyName,
       businessEmail,
       domain,
       partof_franchise,
-      country,
+      // country,
       city,
       state,
       postalCode,
@@ -40,12 +39,13 @@ export async function POST(request: NextRequest) {
     const savedBusiness = await business.save();
 
     return NextResponse.json({
-      message: "Added Business Contact Details",
+      message: "Successfully Added Business Contact Details",
       savedBusiness,
     });
   } catch (error: any) {
     return NextResponse.json({
       error: error.message,
+      message: "Something went wrong",
     });
   }
 }

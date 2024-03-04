@@ -19,18 +19,21 @@ const country = [
 
 const page = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const [businessContactDetails, setbusinessContactDetails] = useState({
-    companyName: "",
-    businessEmail: "",
-    domain: "",
-    partof_franchise: '',
-
-    city: "",
-    state: "",
-    postalCode: "",
-    currency: "",
-    headquater_address: "",
-    phoneNumber: "",
+    
+      companyName: "",
+      businessEmail: "",
+      domain: "",
+      partof_franchise: '',
+      // country: "",
+      city: "",
+      state: "",
+      postalCode: "",
+      currency: "",
+      headquater_address: "",
+      phoneNumber: "",
+    
   })
 
   const handleChange = (e: any) => {
@@ -57,16 +60,16 @@ const page = () => {
     e.preventDefault();
     console.log(businessContactDetails);
     try {
-      const response = await axios.post('http://localhost:3000/api/business/contact', 
-                                          businessContactDetails);
-      
+      setLoading(true);
+      const response = await axios.post('http://localhost:3000/api/business/contact', businessContactDetails);
+
       console.log(response.data);
 
-      router.push("/pages/signup/step1/step2")
-      
-    } catch (error: any) {
-      throw new Error(error.message)
+      router.push("/pages/signup/step2")
 
+    } catch (error: any) {
+      console.log(error.message);
+      setLoading(false);
     }
   }
 
@@ -88,7 +91,8 @@ const page = () => {
           action=""
           className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
-          <Heading text="Contact Info" />
+          {loading ? "Loading..." : <> <Heading text="Contact Info" /> </>}
+
 
           <span className="flex flex-col">
             <label >Company Name</label>
@@ -106,7 +110,7 @@ const page = () => {
             <input
               name="businessEmail"
               type="email"
-              value={businessContactDetails.businessEmail}
+              // value={businessContactDetails.businessEmail}
               placeholder=""
               onChange={handleChange}
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -118,7 +122,7 @@ const page = () => {
             <label >Company Domain</label>
             <input
               name="domain"
-              value={businessContactDetails.domain}
+              // value={businessContactDetails.domain}
               type="text"
               placeholder=""
               onChange={handleChange}
@@ -138,8 +142,8 @@ const page = () => {
               <input type="radio" id="no" name="partof_franchise" value='no' onChange={handleChange} />
             </span>
           </span>
-          {/* 
-          <select
+
+          {/* <select
             name="country"
             id="country"
             className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -147,23 +151,18 @@ const page = () => {
           >
             <option
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-              value="country"
               defaultValue={"Select Country"}
               disabled
             >
               Select Country
             </option>
 
-            {country.map((cntry, i) => (
-              <div key={i}>
-                <option
-                  className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-                  value={cntry}
-                >
-                  {cntry}
-                </option>
-              </div>
-            ))}
+            <option
+            name="country"
+              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
+              value={'Pakistan'}>
+              Pakistan
+            </option>
 
 
           </select> */}
@@ -172,7 +171,7 @@ const page = () => {
             <span className="flex flex-col  w-1/5">
               <label >City</label>
               <input
-                value={businessContactDetails.city}
+                // value={businessContactDetails.city}
                 onChange={handleChange}
                 name="city"
                 type="text"
@@ -185,7 +184,7 @@ const page = () => {
               <label >State</label>
               <input
                 name="state"
-                value={businessContactDetails.state}
+                // value={businessContactDetails.state}
                 onChange={handleChange}
                 type="text"
                 placeholder=""
@@ -197,7 +196,7 @@ const page = () => {
               <label >Postal Code</label>
               <input
                 name="postalCode"
-                value={businessContactDetails.postalCode}
+                // value={businessContactDetails.postalCode}
                 onChange={handleChange}
                 type="text"
                 placeholder=""
@@ -209,7 +208,7 @@ const page = () => {
               <label >Currency</label>
               <input
                 name="currency"
-                value={businessContactDetails.currency}
+                // value={businessContactDetails.currency}
                 onChange={handleChange}
                 type="text"
                 placeholder=""
@@ -223,7 +222,7 @@ const page = () => {
             <input
               id="headquater_address"
               name="headquater_address"
-              value={businessContactDetails.headquater_address}
+              // value={businessContactDetails.headquater_address}
               onChange={handleChange}
               type="text"
               placeholder=""
@@ -236,7 +235,7 @@ const page = () => {
             <label >Company Phone</label>
             <input
               name="phoneNumber"
-              value={businessContactDetails.phoneNumber}
+              // value={businessContactDetails.phoneNumber}
               onChange={handleChange}
               type="number"
               placeholder=""

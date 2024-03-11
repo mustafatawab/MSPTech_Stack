@@ -6,7 +6,7 @@ import background from "@/assets/images/background.jpeg";
 import Heading from "@/components/Heading/heading";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+function BusinessModel() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [businessModelDetails, setBusinessModelDetails] = useState({
@@ -111,4 +111,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BusinessModel;

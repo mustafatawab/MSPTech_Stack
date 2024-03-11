@@ -17,7 +17,7 @@ import image8 from '@/assets/svgs/step5/image8.svg'
 import image9 from '@/assets/svgs/step5/image9.svg'
 import image10 from '@/assets/svgs/step5/image10.svg'
 
-const page = () => {
+function GoBig() {
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState('');
   const [details, setDetails] = useState({
@@ -215,4 +215,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default GoBig;

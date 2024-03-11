@@ -7,7 +7,7 @@ import Heading from "@/components/Heading/heading";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+function Business () {
   const router = useRouter()
   const [loading, setLoading] = useState(false);
   const [details, setDetails] = useState({
@@ -188,4 +188,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Business;

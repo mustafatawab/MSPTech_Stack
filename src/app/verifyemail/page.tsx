@@ -21,12 +21,11 @@ export default function VerifyEmail() {
     }
   };
 
-  useEffect(() => {
-    const urlToken = window.location.search.split("=")[1];
-    setToken(urlToken || "");
-  }, []);
 
   useEffect(() => {
+
+    const urlToken = window.location.search.split("=")[1];
+    setToken(urlToken || "");
     if (token.length > 0) {
       verifyUserEmail();
     }

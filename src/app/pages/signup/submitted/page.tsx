@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import background from "@/assets/images/background.jpeg";
 import Heading from "@/components/Heading/heading";
-const page = () => {
+function Submitted() {
   return (
     <>
       <div className="bg-blue relative -z-10 w-screen">
@@ -44,4 +44,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Submitted;

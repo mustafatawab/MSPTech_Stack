@@ -17,7 +17,7 @@ const country = [
   "Bangladesh",
 ];
 
-const page = () => {
+function Contact(){
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [businessContactDetails, setbusinessContactDetails] = useState({
@@ -258,4 +258,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;

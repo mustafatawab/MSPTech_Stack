@@ -7,7 +7,7 @@ import background from "@/assets/images/background.jpeg";
 import Heading from "@/components/Heading/heading";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+function Partnership ()  {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [admin, setAdmin] = useState({
@@ -157,4 +157,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Partnership;

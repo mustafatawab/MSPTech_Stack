@@ -8,18 +8,11 @@ import Link from "next/link";
 import { products } from "./product";
 import { IoSearchSharp } from "react-icons/io5";
 import { MdStarBorder } from "react-icons/md";
-
 import background from "@/assets/svgs/headerBackground.svg";
-
-// Top rated Apps
-import opkey from "@/assets/svgs/ExploreMarketplace/opkey.svg";
-import fxloader from "@/assets/svgs/ExploreMarketplace/fxloader.svg";
-import sso from "@/assets/svgs/ExploreMarketplace/sso.svg";
-import motiveAI from "@/assets/svgs/ExploreMarketplace/motive.ai.svg";
 import Header from "@/components/Navbar/Header";
 
 
-const page = () => {
+function Page() {
 
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchResults, setSearchResults] = useState({
@@ -36,11 +29,9 @@ const page = () => {
 
 
   const handleSearch = () => {
-    const filterResults = (section: any) =>
-      section.filter((product: any) =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+    const filterResults = (section: any) => section.filter((product: any) => product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
 
     setSearchResults({
       categories: filterResults(products.categories),
@@ -90,8 +81,7 @@ const page = () => {
               type="text"
               className="outline-none border-none px-2 text-black w-full"
               value={searchTerm}
-              onChange={handleChange}
-            />
+              onChange={handleChange} />
           </span>
 
           <button type="button" onClick={handleSearch} className="bg-[#C4CED7]/20 text-black font-semibold   p-1 px-2 shadow-lg border-r-2 border-b-2 ">
@@ -109,20 +99,17 @@ const page = () => {
           </h2>
 
           <div className="flex flex-wrap xs:fle-col sm:flex-col md:flex-row 2xs:justify-center  gap-10 md:justify-between">
-            {searchResults.categories.map((result) =>
-
-
-              <Link href={"/pages/exploreMarketplace/productOverview"}>
-                <div key={result.id} className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
-                  <Image className="mx-auto" src={result.image} alt={result.title} />
-                  <hr className="" />
-                  <br />
-                  <span className="px-10 flex flex-col ">
-                    <p className="font-bold">{result.title}</p>
-                    <p className="text-[#16151399]">{result.apps} Applications</p>
-                  </span>
-                </div>
-              </Link>
+            {searchResults.categories.map((result) => <Link key={result.id} href={"/pages/exploreMarketplace/productOverview"}>
+              <div  className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <Image className="mx-auto" src={result.image} alt={result.title} />
+                <hr className="" />
+                <br />
+                <span className="px-10 flex flex-col ">
+                  <p className="font-bold">{result.title}</p>
+                  <p className="text-[#16151399]">{result.apps} Applications</p>
+                </span>
+              </div>
+            </Link>
             )}
           </div>
         </section>
@@ -230,6 +217,6 @@ const page = () => {
       </Wrapper>
     </>
   );
-};
+}
 
-export default page;
+export default Page;

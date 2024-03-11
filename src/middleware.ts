@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { toast, Toaster } from "react-hot-toast";
 
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
@@ -17,12 +18,10 @@ export function middleware(request: NextRequest) {
   if (!isPublicPath && !token) {
     return NextResponse.redirect(new URL("/pages/signin", request.nextUrl));
   }
+  
 }
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: [
-    "/pages/venderMarketplace/:path*",
-    "/pages/signup/:path*",
-  ],
+  matcher: ["/pages/venderMarketplace/:path*", "/pages/signup/:path*"],
 };

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/footer";
+import logo from '@/assets/svgs/logo.svg'
 
 // const inter = Inter({ subsets: ["latin"] });
 

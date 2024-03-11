@@ -7,6 +7,11 @@ const businessSchema = mongoose.Schema({
   adminAccountTitle: String,
   adminPhone: String,
   agree: String,
+  go : {
+    listned : String,
+    time : String,
+    day : String,
+  }
 });
 
 const BusinessPartnership =

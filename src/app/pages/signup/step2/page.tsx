@@ -29,7 +29,7 @@ const page = () => {
     console.log(businessModelDetails);
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/api/business/model", businessModelDetails);
+      const response = await axios.post("/api/business/model", businessModelDetails);
       console.log(response);
       router.push("/pages/signup/step3")
     } catch (error: any) {
@@ -54,7 +54,12 @@ const page = () => {
           action=""
           className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
+          <div className="flex justify-between">
+
           {loading ? "Loading " : <><Heading text="Business model" /></>}
+          <p className="text-gray-400 font-semibold">2/5</p>
+          
+          </div>
 
           <p className="text-[#0F1519CC] text-2xl font-semibold">
             Please select the option that best applies to your business model

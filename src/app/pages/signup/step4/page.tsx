@@ -31,7 +31,7 @@ const page = () => {
 
 
   const handleSubmit = async (e: any) => {
-      e.preventDefault();
+    e.preventDefault();
     try {
       setLoading(true);
 
@@ -62,11 +62,16 @@ const page = () => {
           action=""
           className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
-          {loading ? "loading" : <>
 
-            <Heading text="Partnership" />
-          </>}
+          <div className="flex justify-between">
 
+            {loading ? "loading" : <>
+
+              <Heading text="Partnership" />
+            </>}
+            <p className="text-gray-400 font-semibold">4/5</p>
+
+          </div>
           <span className="flex flex-col">
             <label htmlFor="">Account Administrator First Name</label>
             <input

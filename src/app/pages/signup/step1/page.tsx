@@ -61,7 +61,7 @@ const page = () => {
     console.log(businessContactDetails);
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3000/api/business/contact', businessContactDetails);
+      const response = await axios.post('/api/business/contact', businessContactDetails);
 
       console.log(response.data);
 
@@ -91,7 +91,11 @@ const page = () => {
           action=""
           className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
+          <div className="flex justify-between">
+
           {loading ? "Loading..." : <> <Heading text="Contact Info" /> </>}
+          <p className="text-gray-400 font-semibold">1/5</p>
+          </div>
 
 
           <span className="flex flex-col">

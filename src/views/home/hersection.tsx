@@ -29,10 +29,12 @@ const HeroSection = () => {
         <span className="flex flex-wrap 2xs:flex-col md:flex-row xs:gap-1 sm:gap-1 md:gap-7 lg:gap-8 items-start">
           <div className="flex items-start">
 
-          <SecondaryButton text="Request a Demo" />
+            <SecondaryButton text="Request a Demo" />
           </div>
           <Link href={"/pages/exploreMarketplace"}>
-            <PrimaryButton text="Explore the Marketplace" />
+            <button className=" hover:bg-transparent hover:outline 2xs:mx-auto sm:mx-auto md:mx-0 w-fit bg-blue text-white  rounded-3xl 2xs:px-2 sm:px-2 md:px-4 lg:px-4 2xs:py-1 sm:py-1 md:py-2 lg:py-2 xs:text-sm  md:text-lg">
+              Explore the Marketplace
+            </button>
           </Link>
         </span>
       </div>

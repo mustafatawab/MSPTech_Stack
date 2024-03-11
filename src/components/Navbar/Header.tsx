@@ -97,7 +97,7 @@ const Header = () => {
               <li className="mt-4 lg:mt-0 2xs:w-full lg:w-fit">
                 <Link
                   href="/pages/signin"
-                  className="py-3 px-4 text-center border  rounded-md block lg:inline lg:border-0"
+                  className="hover:bg-blue hover:border-none py-2 px-4 text-center border border-white    rounded-md block lg:inline lg:border-0"
                 >
                   Login
                 </Link>
@@ -105,7 +105,7 @@ const Header = () => {
               <li className="mt-8 lg:mt-0 2xs:w-full lg:w-fit">
                 <Link
                   href="/pages/signup"
-                  className="py-3 px-4 text-center text-white   bg-blue/80 hover:bg-blue rounded-full shadow block lg:inline "
+                  className=" py-2 px-4 text-center text-white   bg-blue/80 hover:bg-transparent hover:border  rounded-full shadow block lg:inline "
                 >
                   Get Started
                 </Link>

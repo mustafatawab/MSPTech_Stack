@@ -38,7 +38,7 @@ const SignUp = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:3000/api/users/signup",
+        "/api/users/signup",
         user
       );
       toast.success("Form Submitted");

@@ -1,8 +1,14 @@
 "use client";
 import Heading from "@/components/Heading/heading";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
+
+
+
+  const [loading, setLoading] = useState(false)
   const [contactDetails, setContactDetails] = useState({
     name: "",
     email: "",
@@ -17,17 +23,30 @@ const Contact = () => {
     setContactDetails((prev) => {
       return { ...prev, [name]: value };
     });
+
+
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     console.log(contactDetails);
 
-    setContactDetails({
-      name: "",
-      email: "",
-      message: "",
-    });
+    try {
+      setLoading(true);
+      const res = await axios.post("/api/contact", contactDetails);
+      console.log(res);
+      toast.success("submitted");
+      setContactDetails({
+        name: "",
+        email: "",
+        message: "",
+      })
+    } catch (error: any) {
+      console.log(error);
+
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -56,6 +75,7 @@ const Contact = () => {
             className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
             type="text"
             placeholder="Name*"
+            value={contactDetails.name}
             name="name"
             onChange={handleChange}
             required
@@ -64,6 +84,7 @@ const Contact = () => {
           <input
             className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
             type="email"
+            value={contactDetails.email}
             placeholder="Business E-mail*"
             name="email"
             onChange={handleChange}
@@ -71,7 +92,8 @@ const Contact = () => {
           />
 
           <textarea
-            name=""
+            name="message"
+            value={contactDetails.message}
             id=""
             cols={20}
             rows={6}
@@ -80,9 +102,10 @@ const Contact = () => {
             onChange={handleChange}
             required
           />
-          <button className="w-fit ml-auto bg-blue text-white rounded-3xl px-8 py-2 ">
+          <button type="submit" className="w-fit ml-auto bg-blue text-white rounded-3xl px-8 py-2 ">
             Submit
           </button>
+          <Toaster />
         </form>
       </div>
     </div>

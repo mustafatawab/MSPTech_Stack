@@ -35,10 +35,10 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/api/users/signin", user);
+      const response = await axios.post("/api/users/signin", user);
       console.log("Login Success", response.data);
       toast.success("Login Success");
-      router.push("/pages/signup/step1");
+      router.push("/pages/venderMarketplace");
     } catch (error: any) {
       setNotValid(true);
       console.log(error.message);

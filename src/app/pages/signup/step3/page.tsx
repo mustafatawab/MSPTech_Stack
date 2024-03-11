@@ -63,10 +63,16 @@ const page = () => {
           action=""
           className="mx-auto 2xs:w-full sm:w-3/4 md:w-2/3 lg:w-1/2 p-10 bg-white flex flex-col gap-5  rounded-2xl  shadow-xl"
         >
-          {loading ? "Loading..." : <>
-            <Heading text="Business Details" />
+          <div className="flex justify-between">
 
-          </>}
+            {loading ? "Loading..." : <>
+              <Heading text="Business Details" />
+
+            </>}
+
+          <p className="text-gray-400 font-semibold">3/5</p>
+
+          </div>
 
           <span className="flex flex-col">
             <label htmlFor="">Number of Employes</label>

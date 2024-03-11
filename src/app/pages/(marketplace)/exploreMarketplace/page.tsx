@@ -42,7 +42,16 @@ function Page() {
   };
 
   useEffect(() => {
-    handleSearch();
+    const filterResults = (section: any) => section.filter((product: any) => product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (product.description && product.description.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
+
+    setSearchResults({
+      categories: filterResults(products.categories),
+      featured: filterResults(products.featured),
+      recent: filterResults(products.recent),
+      topRated: filterResults(products.topRated),
+    });
   }, [searchTerm]);
 
   return (
@@ -100,7 +109,7 @@ function Page() {
 
           <div className="flex flex-wrap xs:fle-col sm:flex-col md:flex-row 2xs:justify-center  gap-10 md:justify-between">
             {searchResults.categories.map((result) => <Link key={result.id} href={"/pages/exploreMarketplace/productOverview"}>
-              <div  className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
+              <div className="bg-white shadow-xl rounded-md  py-10 space-y-5 sm:mx-auto md:mx-0 2xs:basis-full  xs:basis-1/2 md:basis-1/3 lg:basis-1/6">
                 <Image className="mx-auto" src={result.image} alt={result.title} />
                 <hr className="" />
                 <br />

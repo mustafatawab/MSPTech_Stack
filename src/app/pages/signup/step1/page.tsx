@@ -17,29 +17,28 @@ const country = [
   "Bangladesh",
 ];
 
-function Contact(){
+function Contact() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [businessContactDetails, setbusinessContactDetails] = useState({
-    
-      companyName: "",
-      businessEmail: "",
-      domain: "",
-      partof_franchise: '',
-      // country: "",
-      city: "",
-      state: "",
-      postalCode: "",
-      currency: "",
-      headquater_address: "",
-      phoneNumber: "",
-    
+
+    companyName: "",
+    businessEmail: "",
+    domain: "",
+    partof_franchise: '',
+    country: "",
+    city: "",
+    state: "",
+    postalCode: "",
+    currency: "",
+    headquater_address: "",
+    phoneNumber: "",
+
   })
 
   const handleChange = (e: any) => {
 
     const { name, value } = e.target;
-    console.log('Name ', name, " value ", value);
 
     setbusinessContactDetails({
       ...businessContactDetails,
@@ -48,13 +47,6 @@ function Contact(){
   }
 
 
-  // const handleRadioChange = (e: any) => {
-  //   const { name, value } = e.target;
-  //   setbusinessContactDetails({
-  //     ...businessContactDetails,
-  //     [name]: value === "yes", // Convert value to boolean
-  //   });
-  // };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -93,8 +85,8 @@ function Contact(){
         >
           <div className="flex justify-between">
 
-          {loading ? "Loading..." : <> <Heading text="Contact Info" /> </>}
-          <p className="text-gray-400 font-semibold">1/5</p>
+            {loading ? "Loading..." : <> <Heading text="Contact Info" /> </>}
+            <p className="text-gray-400 font-semibold">1/5</p>
           </div>
 
 
@@ -114,7 +106,7 @@ function Contact(){
             <input
               name="businessEmail"
               type="email"
-              // value={businessContactDetails.businessEmail}
+              value={businessContactDetails.businessEmail}
               placeholder=""
               onChange={handleChange}
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
@@ -126,7 +118,7 @@ function Contact(){
             <label >Company Domain</label>
             <input
               name="domain"
-              // value={businessContactDetails.domain}
+              value={businessContactDetails.domain}
               type="text"
               placeholder=""
               onChange={handleChange}
@@ -147,35 +139,64 @@ function Contact(){
             </span>
           </span>
 
-          {/* <select
+          <select
             name="country"
             id="country"
+            value={businessContactDetails.country}
             className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold border border-black"
             required
           >
             <option
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
-              defaultValue={"Select Country"}
+              defaultChecked
               disabled
             >
               Select Country
             </option>
 
+
             <option
-            name="country"
+              value={"USA"}
+              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
+
+            >
+              USA
+            </option>
+
+            <option
               className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
               value={'Pakistan'}>
               Pakistan
             </option>
 
 
-          </select> */}
+            <option
+              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
+              value={'India'}>
+              India
+            </option>
+
+
+            <option
+              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
+              value={'Canada'}>
+              Canada
+            </option>
+
+            <option
+              className="bg-[#ECEBF6] rounded-xl p-2  outline-none font-semibold"
+              value={'England'}>
+              England
+            </option>
+
+
+          </select>
 
           <div className="flex justify-between ">
             <span className="flex flex-col  w-1/5">
               <label >City</label>
               <input
-                // value={businessContactDetails.city}
+                value={businessContactDetails.city}
                 onChange={handleChange}
                 name="city"
                 type="text"
@@ -188,7 +209,7 @@ function Contact(){
               <label >State</label>
               <input
                 name="state"
-                // value={businessContactDetails.state}
+                value={businessContactDetails.state}
                 onChange={handleChange}
                 type="text"
                 placeholder=""
@@ -200,7 +221,7 @@ function Contact(){
               <label >Postal Code</label>
               <input
                 name="postalCode"
-                // value={businessContactDetails.postalCode}
+                value={businessContactDetails.postalCode}
                 onChange={handleChange}
                 type="text"
                 placeholder=""
@@ -212,7 +233,7 @@ function Contact(){
               <label >Currency</label>
               <input
                 name="currency"
-                // value={businessContactDetails.currency}
+                value={businessContactDetails.currency}
                 onChange={handleChange}
                 type="text"
                 placeholder=""
@@ -226,7 +247,7 @@ function Contact(){
             <input
               id="headquater_address"
               name="headquater_address"
-              // value={businessContactDetails.headquater_address}
+              value={businessContactDetails.headquater_address}
               onChange={handleChange}
               type="text"
               placeholder=""
@@ -239,7 +260,7 @@ function Contact(){
             <label >Company Phone</label>
             <input
               name="phoneNumber"
-              // value={businessContactDetails.phoneNumber}
+              value={businessContactDetails.phoneNumber}
               onChange={handleChange}
               type="number"
               placeholder=""

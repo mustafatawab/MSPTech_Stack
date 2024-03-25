@@ -19,45 +19,20 @@ const businessSchema = mongoose.Schema({
     type: String,
     required: false,
   },
-  country: {
-    type: String,
-  },
-  city: {
-    type: String,
-    required: false,
-  },
-  state: {
-    type: String,
-    required: false,
-  },
-  postalCode: {
-    type: String,
-    required: false,
-  },
-  currency: {
-    type: String,
-    required: false,
-  },
+  country: String,
+  city: String,
+  state: String,
+  postalCode: String,
+  currency: String,
   headquater_address: {
     type: String,
     required: false,
   },
-  number: {
-    type: String,
-    required: false,
-  },
-  businessModel: {
-    type: String,
-    required: false,
-  },
-  businessClassification: {
-    type: String,
-    required: false,
-  },
+  phoneNumber: String,
 });
 
 const BusinessContact =
   mongoose.models.Business_Contact ||
-  mongoose.model("Business_Contact", businessSchema);
+  mongoose.model("Business Contact", businessSchema);
 
 export default BusinessContact;

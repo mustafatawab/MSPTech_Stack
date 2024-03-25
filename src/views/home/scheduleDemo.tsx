@@ -110,11 +110,12 @@ const ScheduleDemo = () => {
             placeholder=" Business Phone*"
           />
           <select
+            
             value={demo.country}
             onChange={handleChange}
             name="country"
             id="country"
-            className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
+            className=" bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
           >
             <option
               className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"

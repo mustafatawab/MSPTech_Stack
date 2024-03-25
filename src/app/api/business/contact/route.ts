@@ -1,7 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import { Connect } from "@/lib/dbConfig";
 import BusinessContact from "@/models/businessContact";
-import Business from "@/models/business";
 Connect();
 export async function POST(request: NextRequest) {
   try {
@@ -11,7 +10,7 @@ export async function POST(request: NextRequest) {
       businessEmail,
       domain,
       partof_franchise,
-      // country,
+      country,
       city,
       state,
       postalCode,
@@ -27,7 +26,7 @@ export async function POST(request: NextRequest) {
       businessEmail,
       domain,
       partof_franchise,
-      // country,
+      country,
       city,
       state,
       postalCode,

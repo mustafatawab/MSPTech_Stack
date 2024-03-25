@@ -1,5 +1,7 @@
 "use client";
+import axios from "axios";
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const VenderForm = () => {
   const [formDetails, setFormDetails] = useState({
@@ -18,19 +20,26 @@ const VenderForm = () => {
       return { ...prev, [name]: value };
     });
   };
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     console.log(formDetails);
+    try {
+      await axios.post('/api/joinMarketplace', formDetails)
+      toast.success("Successfully registered for joining");
+      setFormDetails({
+        CompanyName: "",
+        CompanyWebsite: "",
+        name: "",
+        email: "",
+        job: "",
+        country: "",
+        preferredPerson: "",
+      });
+    } catch (error: any) {
+      console.log(error.message);
+      toast.error("Something went wrong")
 
-    setFormDetails({
-      CompanyName: "",
-      CompanyWebsite: "",
-      name: "",
-      email: "",
-      job: "",
-      country: "",
-      preferredPerson: "",
-    });
+    }
   };
 
   return (
@@ -90,6 +99,7 @@ const VenderForm = () => {
 
       <select
         name="country"
+        value={formDetails.country}
         id="country"
         required
         className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
@@ -105,25 +115,25 @@ const VenderForm = () => {
 
         <option
           className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-          value="country"
+          value="Pakistan"
         >
           Pakistan
         </option>
         <option
           className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-          value="country"
+          value="USA"
         >
           USA
         </option>
         <option
           className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-          value="country"
+          value="India"
         >
           India
         </option>
         <option
           className="bg-[#ECEBF6] rounded-xl p-2 text-[#577DB8] outline-none font-semibold"
-          value="country"
+          value="Other"
         >
           Other
         </option>
@@ -152,6 +162,7 @@ const VenderForm = () => {
       <button className="w-fit 2xs:mx-auto md:ml-auto bg-blue text-white rounded-3xl px-8 py-2 ">
         Submit
       </button>
+      <Toaster />
     </form>
   );
 };

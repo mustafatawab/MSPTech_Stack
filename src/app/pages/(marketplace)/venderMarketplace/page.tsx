@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Heading from "@/components/Heading/heading";
 import Wrapper from "@/components/Wrapper/wrapper";
@@ -116,7 +117,10 @@ const page = () => {
             <Image src={growUpImage} alt="" />
           </div>
           <div className="xs:mx-auto my-5 xs:block md:hidden lg:hidden">
-            <PrimaryButton text="Join the MSPTech Stack Marketplace" />
+
+            
+            <PrimaryButton  text="Join the MSPTech Stack Marketplace" />
+
           </div>
         </section>
 
@@ -133,17 +137,22 @@ const page = () => {
                 <p className="text-white">98.5% fully automated</p>
               </span>
               <span className=" w-[253px] flex flex-col p-10 justify-center items-center rounded-3xl shadow-xl">
-                <h2 className="text-white font-bold text-[44px]">100K+</h2>
+                {/* <h2 className="text-white font-bold text-[44px]">100K+</h2> */}
+                <AnimatedCounter value={100} sign="k+" />
+
                 <p className="text-white">Over 300,000 transactions per</p>
               </span>
               <span className=" w-[253px] flex flex-col p-10 justify-center items-center rounded-3xl shadow-xl">
-                <h2 className="text-white font-bold text-[44px]">400</h2>
+                {/* <h2 className="text-white font-bold text-[44px]">400</h2> */}
+                <AnimatedCounter value={400} />
                 <p className="text-white">
                   Currency conversion for 17 currencies
                 </p>
               </span>
               <span className="w-[253px] flex flex-col p-10 justify-center items-center rounded-3xl shadow-xl">
-                <h2 className="text-white font-bold text-[44px]">1400%</h2>
+                {/* <h2 className="text-white font-bold text-[44px]">1400%</h2> */}
+                <AnimatedCounter value={1400} sign='%' />
+
                 <p className="text-white">
                   85% of support requests resolved in-house
                 </p>
@@ -195,7 +204,7 @@ const page = () => {
 
         {/* section 6 - Interested in Joining the Marketplace? */}
 
-        <section className="md:static lg:relative my-10 py-10">
+        <section id="joinMarketplace" className="md:static lg:relative my-10 py-10">
           <span className="2xs:w-full md:w-full lg:w-1/2 ">
             <Heading text="Interested in Joining the Marketplace?" />
           </span>
@@ -221,5 +230,27 @@ const page = () => {
     </>
   );
 };
+
+
+function AnimatedCounter({ value, sign }: { value: any, sign?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount < value) {
+          return prevCount + 1;
+        }
+        clearInterval(interval);
+        return value;
+      });
+    }, 20); // Change the interval to speed up or slow down the animation
+
+    return () => clearInterval(interval);
+  }, [value]);
+
+  return <h2 className="text-white font-bold text-[44px] duration-200">{count} {sign}</h2>;
+}
+
 
 export default page;
